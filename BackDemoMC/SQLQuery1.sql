@@ -1,0 +1,1 @@
+﻿CREATE LOGIN developer WITH PASSWORD = 'CD12345343dfsdf12'

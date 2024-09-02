@@ -1,0 +1,1849 @@
+Request starting HTTP/2.0 OPTIONS https://localhost:44363/login  
+CORS policy execution successful.
+Request finished in 93.9953ms 204 
+Request starting HTTP/2.0 POST https://localhost:44363/login application/json;charset=utf-8 43
+CORS policy execution successful.
+Executing endpoint 'ApiDemoMC.Controllers.AccountController.Login (ApiDemoMC)'
+Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Login(DataAccessLibrary.LoginPassDTO) on controller ApiDemoMC.Controllers.AccountController (ApiDemoMC).
+Executing action method ApiDemoMC.Controllers.AccountController.Login (ApiDemoMC) - Validation state: Valid
+
+
+26.11.2019 16:58:13 Start login user test@mail.ru 
+
+No type was specified for the decimal column 'Amount' on entity type 'PayList'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+Entity Framework Core 2.2.6-servicing-10079 initialized 'MC_ContextDb' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (10ms) [Parameters=[@__value_Email_0='?' (Size = 4000), @__Convert_1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Discriminator], [u].[IsDelete], [u].[Mail], [u].[Name], [u].[Pass], [u].[RoleId], [u].[Phone], [u].[EndDateLicens], [u].[LicensNumber], [u].[Qualification], [u].[StartDateLicens], [u].[Bank_Kor_Sch], [u].[Bank_Rasch_Sch], [u].[Bik_Bank], [u].[FIO], [u].[GradationFIO], [u].[INN], [u].[KPP], [u].[Kor_Sch], [u].[Main_Document], [u].[UrAgent_Phone], [u].[Rasch_Sch], [u].[Ur_Adress]
+FROM [Users] AS [u]
+WHERE [u].[Discriminator] IN (N'UrAgent', N'Buhgalter', N'Agent', N'Admin', N'User') AND (([u].[Mail] = @__value_Email_0) AND ([u].[Pass] = @__Convert_1))
+
+Login Ok 
+
+Executed action method ApiDemoMC.Controllers.AccountController.Login (ApiDemoMC), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 626.4775ms.
+Executing ObjectResult, writing value of type 'System.String'.
+Executed action ApiDemoMC.Controllers.AccountController.Login (ApiDemoMC) in 910.8339ms
+Executed endpoint 'ApiDemoMC.Controllers.AccountController.Login (ApiDemoMC)'
+Request finished in 1141.9248ms 200 text/plain; charset=utf-8
+Request starting HTTP/2.0 OPTIONS https://localhost:44363/GetRole  
+CORS policy execution successful.
+Request finished in 33.5369ms 204 
+Request starting HTTP/2.0 GET https://localhost:44363/GetRole  
+Successfully validated the token.
+CORS policy execution successful.
+Executing endpoint 'ApiDemoMC.Controllers.AccountController.GetRole (ApiDemoMC)'
+Route matched with {action = "GetRole", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[ApiDemoMC.DTO.MailRoleDTO] GetRole() on controller ApiDemoMC.Controllers.AccountController (ApiDemoMC).
+Authorization was successful.
+Executing action method ApiDemoMC.Controllers.AccountController.GetRole (ApiDemoMC) - Validation state: Valid
+Entity Framework Core 2.2.6-servicing-10079 initialized 'MC_ContextDb' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (8ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Discriminator], [e].[IsDelete], [e].[Mail], [e].[Name], [e].[Pass], [e].[RoleId], [e].[Phone], [e].[EndDateLicens], [e].[LicensNumber], [e].[Qualification], [e].[StartDateLicens], [e].[Bank_Kor_Sch], [e].[Bank_Rasch_Sch], [e].[Bik_Bank], [e].[FIO], [e].[GradationFIO], [e].[INN], [e].[KPP], [e].[Kor_Sch], [e].[Main_Document], [e].[UrAgent_Phone], [e].[Rasch_Sch], [e].[Ur_Adress]
+FROM [Users] AS [e]
+WHERE [e].[Discriminator] IN (N'UrAgent', N'Buhgalter', N'Agent', N'Admin', N'User') AND ([e].[Id] = @__get_Item_0)
+Executed action method ApiDemoMC.Controllers.AccountController.GetRole (ApiDemoMC), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 98.7315ms.
+Executing ObjectResult, writing value of type 'ApiDemoMC.DTO.MailRoleDTO'.
+Executed action ApiDemoMC.Controllers.AccountController.GetRole (ApiDemoMC) in 146.1095ms
+Executed endpoint 'ApiDemoMC.Controllers.AccountController.GetRole (ApiDemoMC)'
+Request finished in 227.3087ms 200 application/json; charset=utf-8
+Request starting HTTP/2.0 OPTIONS https://localhost:44363/Migrant/GetUserMigrantList  
+CORS policy execution successful.
+Request finished in 18.7408ms 204 
+Request starting HTTP/2.0 GET https://localhost:44363/Migrant/GetUserMigrantList  
+Successfully validated the token.
+CORS policy execution successful.
+Executing endpoint 'ApiDemoMC.Controllers.MigrantController.GetUserMigrantList (ApiDemoMC)'
+Route matched with {action = "GetUserMigrantList", controller = "Migrant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[DataAccessLibrary.Migrant]]] GetUserMigrantList() on controller ApiDemoMC.Controllers.MigrantController (ApiDemoMC).
+Authorization was successful.
+Executing action method ApiDemoMC.Controllers.MigrantController.GetUserMigrantList (ApiDemoMC) - Validation state: Valid
+Entity Framework Core 2.2.6-servicing-10079 initialized 'MC_ContextDb' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (9ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Discriminator], [e].[IsDelete], [e].[Mail], [e].[Name], [e].[Pass], [e].[RoleId], [e].[Phone], [e].[EndDateLicens], [e].[LicensNumber], [e].[Qualification], [e].[StartDateLicens], [e].[Bank_Kor_Sch], [e].[Bank_Rasch_Sch], [e].[Bik_Bank], [e].[FIO], [e].[GradationFIO], [e].[INN], [e].[KPP], [e].[Kor_Sch], [e].[Main_Document], [e].[UrAgent_Phone], [e].[Rasch_Sch], [e].[Ur_Adress]
+FROM [Users] AS [e]
+WHERE [e].[Discriminator] IN (N'UrAgent', N'Buhgalter', N'Agent', N'Admin', N'User') AND ([e].[Id] = @__get_Item_0)
+Executed DbCommand (15ms) [Parameters=[@__user_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [p].[UserId], [p].[MigrantId]
+FROM [UserMigrant] AS [p]
+WHERE [p].[UserId] = @__user_Id_0
+Executed DbCommand (11ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed action method ApiDemoMC.Controllers.MigrantController.GetUserMigrantList (ApiDemoMC), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 237.7664ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DataAccessLibrary.Migrant, DataAccessLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action ApiDemoMC.Controllers.MigrantController.GetUserMigrantList (ApiDemoMC) in 276.8336ms
+Executed endpoint 'ApiDemoMC.Controllers.MigrantController.GetUserMigrantList (ApiDemoMC)'
+Request finished in 355.7998ms 200 application/json; charset=utf-8
+Request starting HTTP/2.0 OPTIONS https://localhost:44363/login  
+CORS policy execution successful.
+Request finished in 24.6437ms 204 
+Request starting HTTP/2.0 POST https://localhost:44363/login application/json;charset=utf-8 43
+CORS policy execution successful.
+Executing endpoint 'ApiDemoMC.Controllers.AccountController.Login (ApiDemoMC)'
+Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Login(DataAccessLibrary.LoginPassDTO) on controller ApiDemoMC.Controllers.AccountController (ApiDemoMC).
+Executing action method ApiDemoMC.Controllers.AccountController.Login (ApiDemoMC) - Validation state: Valid
+
+
+26.11.2019 16:58:41 Start login user 14212312312 
+
+Entity Framework Core 2.2.6-servicing-10079 initialized 'MC_ContextDb' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (0ms) [Parameters=[@__value_Email_0='?' (Size = 4000), @__Convert_1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Discriminator], [u].[IsDelete], [u].[Mail], [u].[Name], [u].[Pass], [u].[RoleId], [u].[Phone], [u].[EndDateLicens], [u].[LicensNumber], [u].[Qualification], [u].[StartDateLicens], [u].[Bank_Kor_Sch], [u].[Bank_Rasch_Sch], [u].[Bik_Bank], [u].[FIO], [u].[GradationFIO], [u].[INN], [u].[KPP], [u].[Kor_Sch], [u].[Main_Document], [u].[UrAgent_Phone], [u].[Rasch_Sch], [u].[Ur_Adress]
+FROM [Users] AS [u]
+WHERE [u].[Discriminator] IN (N'UrAgent', N'Buhgalter', N'Agent', N'Admin', N'User') AND (([u].[Mail] = @__value_Email_0) AND ([u].[Pass] = @__Convert_1))
+
+Login - Fail  user 14212312312 
+Неверный логин или пароль!
+
+Executed action method ApiDemoMC.Controllers.AccountController.Login (ApiDemoMC), returned result Microsoft.AspNetCore.Mvc.UnauthorizedObjectResult in 37.0376ms.
+Executing ObjectResult, writing value of type 'System.String'.
+Executed action ApiDemoMC.Controllers.AccountController.Login (ApiDemoMC) in 64.2827ms
+Executed endpoint 'ApiDemoMC.Controllers.AccountController.Login (ApiDemoMC)'
+Request finished in 127.3654ms 401 text/plain; charset=utf-8
+Request starting HTTP/2.0 GET https://localhost:44363/  
+Request finished in 329.7786ms 404 
+Request starting HTTP/2.0 GET https://localhost:44363/favicon.ico  
+Request finished in 26.1871ms 404 
+Request starting HTTP/2.0 GET https://localhost:44363/getstring  
+Executing endpoint 'ApiDemoMC.Controllers.AccountController.GetString (ApiDemoMC)'
+Route matched with {action = "GetString", controller = "Account"}. Executing controller action with signature System.String GetString() on controller ApiDemoMC.Controllers.AccountController (ApiDemoMC).
+Executing action method ApiDemoMC.Controllers.AccountController.GetString (ApiDemoMC) - Validation state: Valid
+Executed action method ApiDemoMC.Controllers.AccountController.GetString (ApiDemoMC), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 0.2646ms.
+Executing ObjectResult, writing value of type 'System.String'.
+Executed action ApiDemoMC.Controllers.AccountController.GetString (ApiDemoMC) in 1071.6239ms
+Executed endpoint 'ApiDemoMC.Controllers.AccountController.GetString (ApiDemoMC)'
+Request finished in 1129.9867ms 200 text/plain; charset=utf-8
+Request starting HTTP/2.0 GET https://localhost:44363/favicon.ico  
+Request finished in 9.3842ms 404 
+Request starting HTTP/2.0 OPTIONS https://localhost:44363/login  
+CORS policy execution successful.
+Request finished in 96.8791ms 204 
+Request starting HTTP/2.0 POST https://localhost:44363/login application/json;charset=utf-8 43
+CORS policy execution successful.
+Executing endpoint 'ApiDemoMC.Controllers.AccountController.Login (ApiDemoMC)'
+Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Login(DataAccessLibrary.LoginPassDTO) on controller ApiDemoMC.Controllers.AccountController (ApiDemoMC).
+Executing action method ApiDemoMC.Controllers.AccountController.Login (ApiDemoMC) - Validation state: Valid
+
+
+28.11.2019 12:51:47 Start login user test@mail.ru 
+
+No type was specified for the decimal column 'Amount' on entity type 'PayList'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+Entity Framework Core 2.2.6-servicing-10079 initialized 'MC_ContextDb' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (9ms) [Parameters=[@__value_Email_0='?' (Size = 4000), @__Convert_1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Discriminator], [u].[IsDelete], [u].[Mail], [u].[Name], [u].[Pass], [u].[RoleId], [u].[Phone], [u].[EndDateLicens], [u].[LicensNumber], [u].[Qualification], [u].[StartDateLicens], [u].[Bank_Kor_Sch], [u].[Bank_Rasch_Sch], [u].[Bik_Bank], [u].[FIO], [u].[GradationFIO], [u].[INN], [u].[KPP], [u].[Kor_Sch], [u].[Main_Document], [u].[UrAgent_Phone], [u].[Rasch_Sch], [u].[Ur_Adress]
+FROM [Users] AS [u]
+WHERE [u].[Discriminator] IN (N'UrAgent', N'Buhgalter', N'Agent', N'Admin', N'User') AND (([u].[Mail] = @__value_Email_0) AND ([u].[Pass] = @__Convert_1))
+
+Login Ok 
+
+Executed action method ApiDemoMC.Controllers.AccountController.Login (ApiDemoMC), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 9013.2009ms.
+Executing ObjectResult, writing value of type 'System.String'.
+Executed action ApiDemoMC.Controllers.AccountController.Login (ApiDemoMC) in 9142.9617ms
+Executed endpoint 'ApiDemoMC.Controllers.AccountController.Login (ApiDemoMC)'
+Request finished in 9215.4021ms 200 text/plain; charset=utf-8
+Request starting HTTP/2.0 OPTIONS https://localhost:44363/GetRole  
+CORS policy execution successful.
+Request finished in 18.1176ms 204 
+Request starting HTTP/2.0 GET https://localhost:44363/GetRole  
+Successfully validated the token.
+CORS policy execution successful.
+Executing endpoint 'ApiDemoMC.Controllers.AccountController.GetRole (ApiDemoMC)'
+Route matched with {action = "GetRole", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[ApiDemoMC.DTO.MailRoleDTO] GetRole() on controller ApiDemoMC.Controllers.AccountController (ApiDemoMC).
+Authorization was successful.
+Executing action method ApiDemoMC.Controllers.AccountController.GetRole (ApiDemoMC) - Validation state: Valid
+Entity Framework Core 2.2.6-servicing-10079 initialized 'MC_ContextDb' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (24ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Discriminator], [e].[IsDelete], [e].[Mail], [e].[Name], [e].[Pass], [e].[RoleId], [e].[Phone], [e].[EndDateLicens], [e].[LicensNumber], [e].[Qualification], [e].[StartDateLicens], [e].[Bank_Kor_Sch], [e].[Bank_Rasch_Sch], [e].[Bik_Bank], [e].[FIO], [e].[GradationFIO], [e].[INN], [e].[KPP], [e].[Kor_Sch], [e].[Main_Document], [e].[UrAgent_Phone], [e].[Rasch_Sch], [e].[Ur_Adress]
+FROM [Users] AS [e]
+WHERE [e].[Discriminator] IN (N'UrAgent', N'Buhgalter', N'Agent', N'Admin', N'User') AND ([e].[Id] = @__get_Item_0)
+Executed action method ApiDemoMC.Controllers.AccountController.GetRole (ApiDemoMC), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 155.3718ms.
+Executing ObjectResult, writing value of type 'ApiDemoMC.DTO.MailRoleDTO'.
+Executed action ApiDemoMC.Controllers.AccountController.GetRole (ApiDemoMC) in 203.3947ms
+Executed endpoint 'ApiDemoMC.Controllers.AccountController.GetRole (ApiDemoMC)'
+Request finished in 283.3441ms 200 application/json; charset=utf-8
+Request starting HTTP/2.0 OPTIONS https://localhost:44363/Migrant/GetUserMigrantList  
+CORS policy execution successful.
+Request finished in 18.0636ms 204 
+Request starting HTTP/2.0 GET https://localhost:44363/Migrant/GetUserMigrantList  
+Successfully validated the token.
+CORS policy execution successful.
+Executing endpoint 'ApiDemoMC.Controllers.MigrantController.GetUserMigrantList (ApiDemoMC)'
+Route matched with {action = "GetUserMigrantList", controller = "Migrant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[DataAccessLibrary.Migrant]]] GetUserMigrantList() on controller ApiDemoMC.Controllers.MigrantController (ApiDemoMC).
+Authorization was successful.
+Executing action method ApiDemoMC.Controllers.MigrantController.GetUserMigrantList (ApiDemoMC) - Validation state: Valid
+Entity Framework Core 2.2.6-servicing-10079 initialized 'MC_ContextDb' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (104ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Discriminator], [e].[IsDelete], [e].[Mail], [e].[Name], [e].[Pass], [e].[RoleId], [e].[Phone], [e].[EndDateLicens], [e].[LicensNumber], [e].[Qualification], [e].[StartDateLicens], [e].[Bank_Kor_Sch], [e].[Bank_Rasch_Sch], [e].[Bik_Bank], [e].[FIO], [e].[GradationFIO], [e].[INN], [e].[KPP], [e].[Kor_Sch], [e].[Main_Document], [e].[UrAgent_Phone], [e].[Rasch_Sch], [e].[Ur_Adress]
+FROM [Users] AS [e]
+WHERE [e].[Discriminator] IN (N'UrAgent', N'Buhgalter', N'Agent', N'Admin', N'User') AND ([e].[Id] = @__get_Item_0)
+Executed DbCommand (11ms) [Parameters=[@__user_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [p].[UserId], [p].[MigrantId]
+FROM [UserMigrant] AS [p]
+WHERE [p].[UserId] = @__user_Id_0
+Executed DbCommand (16ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed action method ApiDemoMC.Controllers.MigrantController.GetUserMigrantList (ApiDemoMC), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 342.2644ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DataAccessLibrary.Migrant, DataAccessLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action ApiDemoMC.Controllers.MigrantController.GetUserMigrantList (ApiDemoMC) in 382.8698ms
+Executed endpoint 'ApiDemoMC.Controllers.MigrantController.GetUserMigrantList (ApiDemoMC)'
+Request finished in 452.4003ms 200 application/json; charset=utf-8
+Request starting HTTP/2.0 OPTIONS https://localhost:44363/login  
+CORS policy execution successful.
+Request finished in 25.381ms 204 
+Request starting HTTP/2.0 POST https://localhost:44363/login application/json;charset=utf-8 43
+CORS policy execution successful.
+Executing endpoint 'ApiDemoMC.Controllers.AccountController.Login (ApiDemoMC)'
+Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Login(DataAccessLibrary.LoginPassDTO) on controller ApiDemoMC.Controllers.AccountController (ApiDemoMC).
+Executing action method ApiDemoMC.Controllers.AccountController.Login (ApiDemoMC) - Validation state: Valid
+
+
+28.11.2019 12:53:41 Start login user test@mail.ru 
+
+Entity Framework Core 2.2.6-servicing-10079 initialized 'MC_ContextDb' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (0ms) [Parameters=[@__value_Email_0='?' (Size = 4000), @__Convert_1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Discriminator], [u].[IsDelete], [u].[Mail], [u].[Name], [u].[Pass], [u].[RoleId], [u].[Phone], [u].[EndDateLicens], [u].[LicensNumber], [u].[Qualification], [u].[StartDateLicens], [u].[Bank_Kor_Sch], [u].[Bank_Rasch_Sch], [u].[Bik_Bank], [u].[FIO], [u].[GradationFIO], [u].[INN], [u].[KPP], [u].[Kor_Sch], [u].[Main_Document], [u].[UrAgent_Phone], [u].[Rasch_Sch], [u].[Ur_Adress]
+FROM [Users] AS [u]
+WHERE [u].[Discriminator] IN (N'UrAgent', N'Buhgalter', N'Agent', N'Admin', N'User') AND (([u].[Mail] = @__value_Email_0) AND ([u].[Pass] = @__Convert_1))
+
+Login Ok 
+
+Executed action method ApiDemoMC.Controllers.AccountController.Login (ApiDemoMC), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 39.9349ms.
+Executing ObjectResult, writing value of type 'System.String'.
+Executed action ApiDemoMC.Controllers.AccountController.Login (ApiDemoMC) in 65.6355ms
+Executed endpoint 'ApiDemoMC.Controllers.AccountController.Login (ApiDemoMC)'
+Request finished in 130.1636ms 200 text/plain; charset=utf-8
+Request starting HTTP/2.0 OPTIONS https://localhost:44363/GetRole  
+CORS policy execution successful.
+Request finished in 17.0051ms 204 
+Request starting HTTP/2.0 GET https://localhost:44363/GetRole  
+Successfully validated the token.
+CORS policy execution successful.
+Executing endpoint 'ApiDemoMC.Controllers.AccountController.GetRole (ApiDemoMC)'
+Route matched with {action = "GetRole", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[ApiDemoMC.DTO.MailRoleDTO] GetRole() on controller ApiDemoMC.Controllers.AccountController (ApiDemoMC).
+Authorization was successful.
+Executing action method ApiDemoMC.Controllers.AccountController.GetRole (ApiDemoMC) - Validation state: Valid
+Entity Framework Core 2.2.6-servicing-10079 initialized 'MC_ContextDb' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Discriminator], [e].[IsDelete], [e].[Mail], [e].[Name], [e].[Pass], [e].[RoleId], [e].[Phone], [e].[EndDateLicens], [e].[LicensNumber], [e].[Qualification], [e].[StartDateLicens], [e].[Bank_Kor_Sch], [e].[Bank_Rasch_Sch], [e].[Bik_Bank], [e].[FIO], [e].[GradationFIO], [e].[INN], [e].[KPP], [e].[Kor_Sch], [e].[Main_Document], [e].[UrAgent_Phone], [e].[Rasch_Sch], [e].[Ur_Adress]
+FROM [Users] AS [e]
+WHERE [e].[Discriminator] IN (N'UrAgent', N'Buhgalter', N'Agent', N'Admin', N'User') AND ([e].[Id] = @__get_Item_0)
+Executed action method ApiDemoMC.Controllers.AccountController.GetRole (ApiDemoMC), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 19.4732ms.
+Executing ObjectResult, writing value of type 'ApiDemoMC.DTO.MailRoleDTO'.
+Executed action ApiDemoMC.Controllers.AccountController.GetRole (ApiDemoMC) in 51.5501ms
+Executed endpoint 'ApiDemoMC.Controllers.AccountController.GetRole (ApiDemoMC)'
+Request finished in 115.3829ms 200 application/json; charset=utf-8
+Request starting HTTP/2.0 OPTIONS https://localhost:44363/Migrant/GetUserMigrantList  
+CORS policy execution successful.
+Request finished in 16.7837ms 204 
+Request starting HTTP/2.0 GET https://localhost:44363/Migrant/GetUserMigrantList  
+Successfully validated the token.
+CORS policy execution successful.
+Executing endpoint 'ApiDemoMC.Controllers.MigrantController.GetUserMigrantList (ApiDemoMC)'
+Route matched with {action = "GetUserMigrantList", controller = "Migrant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[DataAccessLibrary.Migrant]]] GetUserMigrantList() on controller ApiDemoMC.Controllers.MigrantController (ApiDemoMC).
+Authorization was successful.
+Executing action method ApiDemoMC.Controllers.MigrantController.GetUserMigrantList (ApiDemoMC) - Validation state: Valid
+Entity Framework Core 2.2.6-servicing-10079 initialized 'MC_ContextDb' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Discriminator], [e].[IsDelete], [e].[Mail], [e].[Name], [e].[Pass], [e].[RoleId], [e].[Phone], [e].[EndDateLicens], [e].[LicensNumber], [e].[Qualification], [e].[StartDateLicens], [e].[Bank_Kor_Sch], [e].[Bank_Rasch_Sch], [e].[Bik_Bank], [e].[FIO], [e].[GradationFIO], [e].[INN], [e].[KPP], [e].[Kor_Sch], [e].[Main_Document], [e].[UrAgent_Phone], [e].[Rasch_Sch], [e].[Ur_Adress]
+FROM [Users] AS [e]
+WHERE [e].[Discriminator] IN (N'UrAgent', N'Buhgalter', N'Agent', N'Admin', N'User') AND ([e].[Id] = @__get_Item_0)
+Executed DbCommand (0ms) [Parameters=[@__user_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [p].[UserId], [p].[MigrantId]
+FROM [UserMigrant] AS [p]
+WHERE [p].[UserId] = @__user_Id_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed action method ApiDemoMC.Controllers.MigrantController.GetUserMigrantList (ApiDemoMC), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 159.2274ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DataAccessLibrary.Migrant, DataAccessLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action ApiDemoMC.Controllers.MigrantController.GetUserMigrantList (ApiDemoMC) in 191.2318ms
+Executed endpoint 'ApiDemoMC.Controllers.MigrantController.GetUserMigrantList (ApiDemoMC)'
+Request finished in 256.3664ms 200 application/json; charset=utf-8
+Request starting HTTP/2.0 OPTIONS https://localhost:44363/Migrant/AddDelMigrant/9  
+CORS policy execution successful.
+Request finished in 19.4968ms 204 
+Request starting HTTP/2.0 DELETE https://localhost:44363/Migrant/AddDelMigrant/9  
+CORS policy execution successful.
+Executing endpoint 'ApiDemoMC.Controllers.MigrantController.Delete (ApiDemoMC)'
+Route matched with {action = "Delete", controller = "Migrant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Delete(Int32) on controller ApiDemoMC.Controllers.MigrantController (ApiDemoMC).
+Authorization failed.
+Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+Executing ChallengeResult with authentication schemes ().
+AuthenticationScheme: Bearer was challenged.
+Executed action ApiDemoMC.Controllers.MigrantController.Delete (ApiDemoMC) in 51.5642ms
+Executed endpoint 'ApiDemoMC.Controllers.MigrantController.Delete (ApiDemoMC)'
+Request finished in 109.9181ms 401 
+Request starting HTTP/2.0 OPTIONS https://localhost:44363/login  
+CORS policy execution successful.
+Request finished in 19.2678ms 204 
+Request starting HTTP/2.0 POST https://localhost:44363/login application/json;charset=utf-8 43
+CORS policy execution successful.
+Executing endpoint 'ApiDemoMC.Controllers.AccountController.Login (ApiDemoMC)'
+Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Login(DataAccessLibrary.LoginPassDTO) on controller ApiDemoMC.Controllers.AccountController (ApiDemoMC).
+Executing action method ApiDemoMC.Controllers.AccountController.Login (ApiDemoMC) - Validation state: Valid
+
+
+28.11.2019 12:54:42 Start login user test@mail.ru 
+
+Entity Framework Core 2.2.6-servicing-10079 initialized 'MC_ContextDb' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (5ms) [Parameters=[@__value_Email_0='?' (Size = 4000), @__Convert_1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Discriminator], [u].[IsDelete], [u].[Mail], [u].[Name], [u].[Pass], [u].[RoleId], [u].[Phone], [u].[EndDateLicens], [u].[LicensNumber], [u].[Qualification], [u].[StartDateLicens], [u].[Bank_Kor_Sch], [u].[Bank_Rasch_Sch], [u].[Bik_Bank], [u].[FIO], [u].[GradationFIO], [u].[INN], [u].[KPP], [u].[Kor_Sch], [u].[Main_Document], [u].[UrAgent_Phone], [u].[Rasch_Sch], [u].[Ur_Adress]
+FROM [Users] AS [u]
+WHERE [u].[Discriminator] IN (N'UrAgent', N'Buhgalter', N'Agent', N'Admin', N'User') AND (([u].[Mail] = @__value_Email_0) AND ([u].[Pass] = @__Convert_1))
+
+Login Ok 
+
+Executed action method ApiDemoMC.Controllers.AccountController.Login (ApiDemoMC), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 41.4434ms.
+Executing ObjectResult, writing value of type 'System.String'.
+Executed action ApiDemoMC.Controllers.AccountController.Login (ApiDemoMC) in 68.7896ms
+Executed endpoint 'ApiDemoMC.Controllers.AccountController.Login (ApiDemoMC)'
+Request finished in 136.2735ms 200 text/plain; charset=utf-8
+Request starting HTTP/2.0 OPTIONS https://localhost:44363/GetRole  
+CORS policy execution successful.
+Request finished in 17.3722ms 204 
+Request starting HTTP/2.0 GET https://localhost:44363/GetRole  
+Successfully validated the token.
+CORS policy execution successful.
+Executing endpoint 'ApiDemoMC.Controllers.AccountController.GetRole (ApiDemoMC)'
+Route matched with {action = "GetRole", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[ApiDemoMC.DTO.MailRoleDTO] GetRole() on controller ApiDemoMC.Controllers.AccountController (ApiDemoMC).
+Authorization was successful.
+Executing action method ApiDemoMC.Controllers.AccountController.GetRole (ApiDemoMC) - Validation state: Valid
+Entity Framework Core 2.2.6-servicing-10079 initialized 'MC_ContextDb' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Discriminator], [e].[IsDelete], [e].[Mail], [e].[Name], [e].[Pass], [e].[RoleId], [e].[Phone], [e].[EndDateLicens], [e].[LicensNumber], [e].[Qualification], [e].[StartDateLicens], [e].[Bank_Kor_Sch], [e].[Bank_Rasch_Sch], [e].[Bik_Bank], [e].[FIO], [e].[GradationFIO], [e].[INN], [e].[KPP], [e].[Kor_Sch], [e].[Main_Document], [e].[UrAgent_Phone], [e].[Rasch_Sch], [e].[Ur_Adress]
+FROM [Users] AS [e]
+WHERE [e].[Discriminator] IN (N'UrAgent', N'Buhgalter', N'Agent', N'Admin', N'User') AND ([e].[Id] = @__get_Item_0)
+Executed action method ApiDemoMC.Controllers.AccountController.GetRole (ApiDemoMC), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 20.4414ms.
+Executing ObjectResult, writing value of type 'ApiDemoMC.DTO.MailRoleDTO'.
+Executed action ApiDemoMC.Controllers.AccountController.GetRole (ApiDemoMC) in 53.6851ms
+Executed endpoint 'ApiDemoMC.Controllers.AccountController.GetRole (ApiDemoMC)'
+Request finished in 120.1794ms 200 application/json; charset=utf-8
+Request starting HTTP/2.0 OPTIONS https://localhost:44363/Migrant/GetUserMigrantList  
+CORS policy execution successful.
+Request finished in 17.6418ms 204 
+Request starting HTTP/2.0 GET https://localhost:44363/Migrant/GetUserMigrantList  
+Successfully validated the token.
+CORS policy execution successful.
+Executing endpoint 'ApiDemoMC.Controllers.MigrantController.GetUserMigrantList (ApiDemoMC)'
+Route matched with {action = "GetUserMigrantList", controller = "Migrant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[DataAccessLibrary.Migrant]]] GetUserMigrantList() on controller ApiDemoMC.Controllers.MigrantController (ApiDemoMC).
+Authorization was successful.
+Executing action method ApiDemoMC.Controllers.MigrantController.GetUserMigrantList (ApiDemoMC) - Validation state: Valid
+Entity Framework Core 2.2.6-servicing-10079 initialized 'MC_ContextDb' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Discriminator], [e].[IsDelete], [e].[Mail], [e].[Name], [e].[Pass], [e].[RoleId], [e].[Phone], [e].[EndDateLicens], [e].[LicensNumber], [e].[Qualification], [e].[StartDateLicens], [e].[Bank_Kor_Sch], [e].[Bank_Rasch_Sch], [e].[Bik_Bank], [e].[FIO], [e].[GradationFIO], [e].[INN], [e].[KPP], [e].[Kor_Sch], [e].[Main_Document], [e].[UrAgent_Phone], [e].[Rasch_Sch], [e].[Ur_Adress]
+FROM [Users] AS [e]
+WHERE [e].[Discriminator] IN (N'UrAgent', N'Buhgalter', N'Agent', N'Admin', N'User') AND ([e].[Id] = @__get_Item_0)
+Executed DbCommand (0ms) [Parameters=[@__user_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [p].[UserId], [p].[MigrantId]
+FROM [UserMigrant] AS [p]
+WHERE [p].[UserId] = @__user_Id_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (7ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed action method ApiDemoMC.Controllers.MigrantController.GetUserMigrantList (ApiDemoMC), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 170.3669ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DataAccessLibrary.Migrant, DataAccessLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action ApiDemoMC.Controllers.MigrantController.GetUserMigrantList (ApiDemoMC) in 205.0197ms
+Executed endpoint 'ApiDemoMC.Controllers.MigrantController.GetUserMigrantList (ApiDemoMC)'
+Request finished in 271.0375ms 200 application/json; charset=utf-8
+Request starting HTTP/2.0 OPTIONS https://localhost:44363/login  
+CORS policy execution successful.
+Request finished in 20.415ms 204 
+Request starting HTTP/2.0 POST https://localhost:44363/login application/json;charset=utf-8 43
+CORS policy execution successful.
+Executing endpoint 'ApiDemoMC.Controllers.AccountController.Login (ApiDemoMC)'
+Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Login(DataAccessLibrary.LoginPassDTO) on controller ApiDemoMC.Controllers.AccountController (ApiDemoMC).
+Executing action method ApiDemoMC.Controllers.AccountController.Login (ApiDemoMC) - Validation state: Valid
+
+
+28.11.2019 12:55:43 Start login user test@mail.ru 
+
+Entity Framework Core 2.2.6-servicing-10079 initialized 'MC_ContextDb' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (0ms) [Parameters=[@__value_Email_0='?' (Size = 4000), @__Convert_1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Discriminator], [u].[IsDelete], [u].[Mail], [u].[Name], [u].[Pass], [u].[RoleId], [u].[Phone], [u].[EndDateLicens], [u].[LicensNumber], [u].[Qualification], [u].[StartDateLicens], [u].[Bank_Kor_Sch], [u].[Bank_Rasch_Sch], [u].[Bik_Bank], [u].[FIO], [u].[GradationFIO], [u].[INN], [u].[KPP], [u].[Kor_Sch], [u].[Main_Document], [u].[UrAgent_Phone], [u].[Rasch_Sch], [u].[Ur_Adress]
+FROM [Users] AS [u]
+WHERE [u].[Discriminator] IN (N'UrAgent', N'Buhgalter', N'Agent', N'Admin', N'User') AND (([u].[Mail] = @__value_Email_0) AND ([u].[Pass] = @__Convert_1))
+
+Login Ok 
+
+Executed action method ApiDemoMC.Controllers.AccountController.Login (ApiDemoMC), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 37.1659ms.
+Executing ObjectResult, writing value of type 'System.String'.
+Executed action ApiDemoMC.Controllers.AccountController.Login (ApiDemoMC) in 63.0602ms
+Executed endpoint 'ApiDemoMC.Controllers.AccountController.Login (ApiDemoMC)'
+Request finished in 130.9008ms 200 text/plain; charset=utf-8
+Request starting HTTP/2.0 OPTIONS https://localhost:44363/GetRole  
+CORS policy execution successful.
+Request finished in 17.4016ms 204 
+Request starting HTTP/2.0 GET https://localhost:44363/GetRole  
+Successfully validated the token.
+CORS policy execution successful.
+Executing endpoint 'ApiDemoMC.Controllers.AccountController.GetRole (ApiDemoMC)'
+Route matched with {action = "GetRole", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[ApiDemoMC.DTO.MailRoleDTO] GetRole() on controller ApiDemoMC.Controllers.AccountController (ApiDemoMC).
+Authorization was successful.
+Executing action method ApiDemoMC.Controllers.AccountController.GetRole (ApiDemoMC) - Validation state: Valid
+Entity Framework Core 2.2.6-servicing-10079 initialized 'MC_ContextDb' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Discriminator], [e].[IsDelete], [e].[Mail], [e].[Name], [e].[Pass], [e].[RoleId], [e].[Phone], [e].[EndDateLicens], [e].[LicensNumber], [e].[Qualification], [e].[StartDateLicens], [e].[Bank_Kor_Sch], [e].[Bank_Rasch_Sch], [e].[Bik_Bank], [e].[FIO], [e].[GradationFIO], [e].[INN], [e].[KPP], [e].[Kor_Sch], [e].[Main_Document], [e].[UrAgent_Phone], [e].[Rasch_Sch], [e].[Ur_Adress]
+FROM [Users] AS [e]
+WHERE [e].[Discriminator] IN (N'UrAgent', N'Buhgalter', N'Agent', N'Admin', N'User') AND ([e].[Id] = @__get_Item_0)
+Executed action method ApiDemoMC.Controllers.AccountController.GetRole (ApiDemoMC), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 19.6248ms.
+Executing ObjectResult, writing value of type 'ApiDemoMC.DTO.MailRoleDTO'.
+Executed action ApiDemoMC.Controllers.AccountController.GetRole (ApiDemoMC) in 51.9921ms
+Executed endpoint 'ApiDemoMC.Controllers.AccountController.GetRole (ApiDemoMC)'
+Request finished in 115.7296ms 200 application/json; charset=utf-8
+Request starting HTTP/2.0 OPTIONS https://localhost:44363/Migrant/GetUserMigrantList  
+CORS policy execution successful.
+Request finished in 18.5423ms 204 
+Request starting HTTP/2.0 GET https://localhost:44363/Migrant/GetUserMigrantList  
+Successfully validated the token.
+CORS policy execution successful.
+Executing endpoint 'ApiDemoMC.Controllers.MigrantController.GetUserMigrantList (ApiDemoMC)'
+Route matched with {action = "GetUserMigrantList", controller = "Migrant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[DataAccessLibrary.Migrant]]] GetUserMigrantList() on controller ApiDemoMC.Controllers.MigrantController (ApiDemoMC).
+Authorization was successful.
+Executing action method ApiDemoMC.Controllers.MigrantController.GetUserMigrantList (ApiDemoMC) - Validation state: Valid
+Entity Framework Core 2.2.6-servicing-10079 initialized 'MC_ContextDb' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Discriminator], [e].[IsDelete], [e].[Mail], [e].[Name], [e].[Pass], [e].[RoleId], [e].[Phone], [e].[EndDateLicens], [e].[LicensNumber], [e].[Qualification], [e].[StartDateLicens], [e].[Bank_Kor_Sch], [e].[Bank_Rasch_Sch], [e].[Bik_Bank], [e].[FIO], [e].[GradationFIO], [e].[INN], [e].[KPP], [e].[Kor_Sch], [e].[Main_Document], [e].[UrAgent_Phone], [e].[Rasch_Sch], [e].[Ur_Adress]
+FROM [Users] AS [e]
+WHERE [e].[Discriminator] IN (N'UrAgent', N'Buhgalter', N'Agent', N'Admin', N'User') AND ([e].[Id] = @__get_Item_0)
+Executed DbCommand (0ms) [Parameters=[@__user_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [p].[UserId], [p].[MigrantId]
+FROM [UserMigrant] AS [p]
+WHERE [p].[UserId] = @__user_Id_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (2ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed action method ApiDemoMC.Controllers.MigrantController.GetUserMigrantList (ApiDemoMC), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 165.4226ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DataAccessLibrary.Migrant, DataAccessLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action ApiDemoMC.Controllers.MigrantController.GetUserMigrantList (ApiDemoMC) in 200.8002ms
+Executed endpoint 'ApiDemoMC.Controllers.MigrantController.GetUserMigrantList (ApiDemoMC)'
+Request finished in 268.0319ms 200 application/json; charset=utf-8
+Request starting HTTP/2.0 OPTIONS https://localhost:44363/Migrant/AddDelMigrant/41  
+CORS policy execution successful.
+Request finished in 17.9491ms 204 
+Request starting HTTP/2.0 DELETE https://localhost:44363/Migrant/AddDelMigrant/41  
+Successfully validated the token.
+CORS policy execution successful.
+Executing endpoint 'ApiDemoMC.Controllers.MigrantController.Delete (ApiDemoMC)'
+Route matched with {action = "Delete", controller = "Migrant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Delete(Int32) on controller ApiDemoMC.Controllers.MigrantController (ApiDemoMC).
+Authorization failed.
+Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+Executing ForbidResult with authentication schemes ().
+AuthenticationScheme: Bearer was forbidden.
+Executed action ApiDemoMC.Controllers.MigrantController.Delete (ApiDemoMC) in 51.3857ms
+Executed endpoint 'ApiDemoMC.Controllers.MigrantController.Delete (ApiDemoMC)'
+Request finished in 118.3979ms 403 
+Request starting HTTP/2.0 OPTIONS https://localhost:44363/login  
+CORS policy execution successful.
+Request starting HTTP/2.0 POST https://localhost:44363/login application/json;charset=utf-8 43
+Request finished in 91.6722ms 204 
+CORS policy execution successful.
+Executing endpoint 'ApiDemoMC.Controllers.AccountController.Login (ApiDemoMC)'
+Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Login(DataAccessLibrary.LoginPassDTO) on controller ApiDemoMC.Controllers.AccountController (ApiDemoMC).
+Executing action method ApiDemoMC.Controllers.AccountController.Login (ApiDemoMC) - Validation state: Valid
+
+
+28.11.2019 12:57:47 Start login user test@mail.ru 
+
+No type was specified for the decimal column 'Amount' on entity type 'PayList'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+Entity Framework Core 2.2.6-servicing-10079 initialized 'MC_ContextDb' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (9ms) [Parameters=[@__value_Email_0='?' (Size = 4000), @__Convert_1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Discriminator], [u].[IsDelete], [u].[Mail], [u].[Name], [u].[Pass], [u].[RoleId], [u].[Phone], [u].[EndDateLicens], [u].[LicensNumber], [u].[Qualification], [u].[StartDateLicens], [u].[Bank_Kor_Sch], [u].[Bank_Rasch_Sch], [u].[Bik_Bank], [u].[FIO], [u].[GradationFIO], [u].[INN], [u].[KPP], [u].[Kor_Sch], [u].[Main_Document], [u].[UrAgent_Phone], [u].[Rasch_Sch], [u].[Ur_Adress]
+FROM [Users] AS [u]
+WHERE [u].[Discriminator] IN (N'UrAgent', N'Buhgalter', N'Agent', N'Admin', N'User') AND (([u].[Mail] = @__value_Email_0) AND ([u].[Pass] = @__Convert_1))
+
+Login Ok 
+
+Executed action method ApiDemoMC.Controllers.AccountController.Login (ApiDemoMC), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 551.8156ms.
+Executing ObjectResult, writing value of type 'System.String'.
+Executed action ApiDemoMC.Controllers.AccountController.Login (ApiDemoMC) in 827.3688ms
+Executed endpoint 'ApiDemoMC.Controllers.AccountController.Login (ApiDemoMC)'
+Request finished in 958.125ms 200 text/plain; charset=utf-8
+Request starting HTTP/2.0 OPTIONS https://localhost:44363/GetRole  
+CORS policy execution successful.
+Request finished in 16.9643ms 204 
+Request starting HTTP/2.0 GET https://localhost:44363/GetRole  
+Successfully validated the token.
+CORS policy execution successful.
+Executing endpoint 'ApiDemoMC.Controllers.AccountController.GetRole (ApiDemoMC)'
+Route matched with {action = "GetRole", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[ApiDemoMC.DTO.MailRoleDTO] GetRole() on controller ApiDemoMC.Controllers.AccountController (ApiDemoMC).
+Authorization was successful.
+Executing action method ApiDemoMC.Controllers.AccountController.GetRole (ApiDemoMC) - Validation state: Valid
+Entity Framework Core 2.2.6-servicing-10079 initialized 'MC_ContextDb' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (8ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Discriminator], [e].[IsDelete], [e].[Mail], [e].[Name], [e].[Pass], [e].[RoleId], [e].[Phone], [e].[EndDateLicens], [e].[LicensNumber], [e].[Qualification], [e].[StartDateLicens], [e].[Bank_Kor_Sch], [e].[Bank_Rasch_Sch], [e].[Bik_Bank], [e].[FIO], [e].[GradationFIO], [e].[INN], [e].[KPP], [e].[Kor_Sch], [e].[Main_Document], [e].[UrAgent_Phone], [e].[Rasch_Sch], [e].[Ur_Adress]
+FROM [Users] AS [e]
+WHERE [e].[Discriminator] IN (N'UrAgent', N'Buhgalter', N'Agent', N'Admin', N'User') AND ([e].[Id] = @__get_Item_0)
+Executed action method ApiDemoMC.Controllers.AccountController.GetRole (ApiDemoMC), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 100.6416ms.
+Executing ObjectResult, writing value of type 'ApiDemoMC.DTO.MailRoleDTO'.
+Executed action ApiDemoMC.Controllers.AccountController.GetRole (ApiDemoMC) in 150.4408ms
+Executed endpoint 'ApiDemoMC.Controllers.AccountController.GetRole (ApiDemoMC)'
+Request finished in 231.6574ms 200 application/json; charset=utf-8
+Request starting HTTP/2.0 OPTIONS https://localhost:44363/Migrant/GetUserMigrantList  
+CORS policy execution successful.
+Request finished in 17.1191ms 204 
+Request starting HTTP/2.0 GET https://localhost:44363/Migrant/GetUserMigrantList  
+Successfully validated the token.
+CORS policy execution successful.
+Executing endpoint 'ApiDemoMC.Controllers.MigrantController.GetUserMigrantList (ApiDemoMC)'
+Route matched with {action = "GetUserMigrantList", controller = "Migrant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[DataAccessLibrary.Migrant]]] GetUserMigrantList() on controller ApiDemoMC.Controllers.MigrantController (ApiDemoMC).
+Authorization was successful.
+Executing action method ApiDemoMC.Controllers.MigrantController.GetUserMigrantList (ApiDemoMC) - Validation state: Valid
+Entity Framework Core 2.2.6-servicing-10079 initialized 'MC_ContextDb' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (9ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Discriminator], [e].[IsDelete], [e].[Mail], [e].[Name], [e].[Pass], [e].[RoleId], [e].[Phone], [e].[EndDateLicens], [e].[LicensNumber], [e].[Qualification], [e].[StartDateLicens], [e].[Bank_Kor_Sch], [e].[Bank_Rasch_Sch], [e].[Bik_Bank], [e].[FIO], [e].[GradationFIO], [e].[INN], [e].[KPP], [e].[Kor_Sch], [e].[Main_Document], [e].[UrAgent_Phone], [e].[Rasch_Sch], [e].[Ur_Adress]
+FROM [Users] AS [e]
+WHERE [e].[Discriminator] IN (N'UrAgent', N'Buhgalter', N'Agent', N'Admin', N'User') AND ([e].[Id] = @__get_Item_0)
+Executed DbCommand (1ms) [Parameters=[@__user_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [p].[UserId], [p].[MigrantId]
+FROM [UserMigrant] AS [p]
+WHERE [p].[UserId] = @__user_Id_0
+Executed DbCommand (2ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (2ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed action method ApiDemoMC.Controllers.MigrantController.GetUserMigrantList (ApiDemoMC), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 214.2001ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DataAccessLibrary.Migrant, DataAccessLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action ApiDemoMC.Controllers.MigrantController.GetUserMigrantList (ApiDemoMC) in 253.9742ms
+Executed endpoint 'ApiDemoMC.Controllers.MigrantController.GetUserMigrantList (ApiDemoMC)'
+Request finished in 322.5237ms 200 application/json; charset=utf-8
+Request starting HTTP/2.0 OPTIONS https://localhost:44363/Migrant/AddDelMigrant/9  
+CORS policy execution successful.
+Request finished in 18.4919ms 204 
+Request starting HTTP/2.0 DELETE https://localhost:44363/Migrant/AddDelMigrant/9  
+Successfully validated the token.
+CORS policy execution successful.
+Executing endpoint 'ApiDemoMC.Controllers.MigrantController.Delete (ApiDemoMC)'
+Route matched with {action = "Delete", controller = "Migrant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Delete(Int32) on controller ApiDemoMC.Controllers.MigrantController (ApiDemoMC).
+Authorization was successful.
+Executing action method ApiDemoMC.Controllers.MigrantController.Delete (ApiDemoMC) - Validation state: Valid
+Entity Framework Core 2.2.6-servicing-10079 initialized 'MC_ContextDb' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (2ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Boolean)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Migrant] SET [IsDelite] = @p0
+WHERE [Id] = @p1;
+SELECT @@ROWCOUNT;
+Executed action method ApiDemoMC.Controllers.MigrantController.Delete (ApiDemoMC), returned result Microsoft.AspNetCore.Mvc.OkResult in 130.0021ms.
+Executing HttpStatusCodeResult, setting HTTP status code 200
+Executed action ApiDemoMC.Controllers.MigrantController.Delete (ApiDemoMC) in 169.0721ms
+Executed endpoint 'ApiDemoMC.Controllers.MigrantController.Delete (ApiDemoMC)'
+Request finished in 248.0623ms 200 
+Request starting HTTP/2.0 OPTIONS https://localhost:44363/Migrant  
+CORS policy execution successful.
+Request finished in 25.2268ms 204 
+Request starting HTTP/2.0 PUT https://localhost:44363/Migrant application/json;charset=utf-8 118
+Successfully validated the token.
+CORS policy execution successful.
+Executing endpoint 'ApiDemoMC.Controllers.MigrantController.Put (ApiDemoMC)'
+Route matched with {action = "Put", controller = "Migrant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.String]] Put(ApiDemoMC.DTO.MigrantDTO) on controller ApiDemoMC.Controllers.MigrantController (ApiDemoMC).
+Authorization was successful.
+Executing action method ApiDemoMC.Controllers.MigrantController.Put (ApiDemoMC) - Validation state: Valid
+Entity Framework Core 2.2.6-servicing-10079 initialized 'MC_ContextDb' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (2ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (6ms) [Parameters=[@p2='?' (DbType = Int32), @p0='?' (Size = 4000), @p1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Migrant] SET [Name] = @p0, [Surname] = @p1
+WHERE [Id] = @p2;
+SELECT @@ROWCOUNT;
+Executed action method ApiDemoMC.Controllers.MigrantController.Put (ApiDemoMC), returned result Microsoft.AspNetCore.Mvc.OkResult in 83.2254ms.
+Executing HttpStatusCodeResult, setting HTTP status code 200
+Executed action ApiDemoMC.Controllers.MigrantController.Put (ApiDemoMC) in 123.2363ms
+Executed endpoint 'ApiDemoMC.Controllers.MigrantController.Put (ApiDemoMC)'
+Request finished in 205.7108ms 200 
+Request starting HTTP/2.0 OPTIONS https://localhost:44363/Migrant/GetUserMigrantList  
+CORS policy execution successful.
+Request finished in 18.2205ms 204 
+Request starting HTTP/2.0 GET https://localhost:44363/Migrant/GetUserMigrantList  
+Successfully validated the token.
+CORS policy execution successful.
+Executing endpoint 'ApiDemoMC.Controllers.MigrantController.GetUserMigrantList (ApiDemoMC)'
+Route matched with {action = "GetUserMigrantList", controller = "Migrant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[DataAccessLibrary.Migrant]]] GetUserMigrantList() on controller ApiDemoMC.Controllers.MigrantController (ApiDemoMC).
+Authorization was successful.
+Executing action method ApiDemoMC.Controllers.MigrantController.GetUserMigrantList (ApiDemoMC) - Validation state: Valid
+Entity Framework Core 2.2.6-servicing-10079 initialized 'MC_ContextDb' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Discriminator], [e].[IsDelete], [e].[Mail], [e].[Name], [e].[Pass], [e].[RoleId], [e].[Phone], [e].[EndDateLicens], [e].[LicensNumber], [e].[Qualification], [e].[StartDateLicens], [e].[Bank_Kor_Sch], [e].[Bank_Rasch_Sch], [e].[Bik_Bank], [e].[FIO], [e].[GradationFIO], [e].[INN], [e].[KPP], [e].[Kor_Sch], [e].[Main_Document], [e].[UrAgent_Phone], [e].[Rasch_Sch], [e].[Ur_Adress]
+FROM [Users] AS [e]
+WHERE [e].[Discriminator] IN (N'UrAgent', N'Buhgalter', N'Agent', N'Admin', N'User') AND ([e].[Id] = @__get_Item_0)
+Executed DbCommand (0ms) [Parameters=[@__user_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [p].[UserId], [p].[MigrantId]
+FROM [UserMigrant] AS [p]
+WHERE [p].[UserId] = @__user_Id_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed action method ApiDemoMC.Controllers.MigrantController.GetUserMigrantList (ApiDemoMC), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 162.4904ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DataAccessLibrary.Migrant, DataAccessLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action ApiDemoMC.Controllers.MigrantController.GetUserMigrantList (ApiDemoMC) in 197.083ms
+Executed endpoint 'ApiDemoMC.Controllers.MigrantController.GetUserMigrantList (ApiDemoMC)'
+Request finished in 259.4435ms 200 application/json; charset=utf-8
+Request starting HTTP/2.0 OPTIONS https://localhost:44363/Migrant/AddDelMigrant/48  
+CORS policy execution successful.
+Request finished in 32.0017ms 204 
+Request starting HTTP/2.0 DELETE https://localhost:44363/Migrant/AddDelMigrant/48  
+Successfully validated the token.
+CORS policy execution successful.
+Executing endpoint 'ApiDemoMC.Controllers.MigrantController.Delete (ApiDemoMC)'
+Route matched with {action = "Delete", controller = "Migrant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Delete(Int32) on controller ApiDemoMC.Controllers.MigrantController (ApiDemoMC).
+Authorization was successful.
+Executing action method ApiDemoMC.Controllers.MigrantController.Delete (ApiDemoMC) - Validation state: Valid
+Entity Framework Core 2.2.6-servicing-10079 initialized 'MC_ContextDb' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (7ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Boolean)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Migrant] SET [IsDelite] = @p0
+WHERE [Id] = @p1;
+SELECT @@ROWCOUNT;
+Executed action method ApiDemoMC.Controllers.MigrantController.Delete (ApiDemoMC), returned result Microsoft.AspNetCore.Mvc.OkResult in 41830.1478ms.
+Executing HttpStatusCodeResult, setting HTTP status code 200
+Executed action ApiDemoMC.Controllers.MigrantController.Delete (ApiDemoMC) in 54168.8306ms
+Executed endpoint 'ApiDemoMC.Controllers.MigrantController.Delete (ApiDemoMC)'
+Request finished in 54254.6766ms 200 
+Request starting HTTP/2.0 OPTIONS https://localhost:44363/login  
+CORS policy execution successful.
+Request finished in 24.0179ms 204 
+Request starting HTTP/2.0 POST https://localhost:44363/login application/json;charset=utf-8 43
+CORS policy execution successful.
+Executing endpoint 'ApiDemoMC.Controllers.AccountController.Login (ApiDemoMC)'
+Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Login(DataAccessLibrary.LoginPassDTO) on controller ApiDemoMC.Controllers.AccountController (ApiDemoMC).
+Executing action method ApiDemoMC.Controllers.AccountController.Login (ApiDemoMC) - Validation state: Valid
+
+
+28.11.2019 13:00:41 Start login user test@mail.ru 
+
+Entity Framework Core 2.2.6-servicing-10079 initialized 'MC_ContextDb' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (0ms) [Parameters=[@__value_Email_0='?' (Size = 4000), @__Convert_1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Discriminator], [u].[IsDelete], [u].[Mail], [u].[Name], [u].[Pass], [u].[RoleId], [u].[Phone], [u].[EndDateLicens], [u].[LicensNumber], [u].[Qualification], [u].[StartDateLicens], [u].[Bank_Kor_Sch], [u].[Bank_Rasch_Sch], [u].[Bik_Bank], [u].[FIO], [u].[GradationFIO], [u].[INN], [u].[KPP], [u].[Kor_Sch], [u].[Main_Document], [u].[UrAgent_Phone], [u].[Rasch_Sch], [u].[Ur_Adress]
+FROM [Users] AS [u]
+WHERE [u].[Discriminator] IN (N'UrAgent', N'Buhgalter', N'Agent', N'Admin', N'User') AND (([u].[Mail] = @__value_Email_0) AND ([u].[Pass] = @__Convert_1))
+
+Login Ok 
+
+Executed action method ApiDemoMC.Controllers.AccountController.Login (ApiDemoMC), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 37.5875ms.
+Executing ObjectResult, writing value of type 'System.String'.
+Executed action ApiDemoMC.Controllers.AccountController.Login (ApiDemoMC) in 67.3649ms
+Executed endpoint 'ApiDemoMC.Controllers.AccountController.Login (ApiDemoMC)'
+Request finished in 132.415ms 200 text/plain; charset=utf-8
+Request starting HTTP/2.0 OPTIONS https://localhost:44363/GetRole  
+CORS policy execution successful.
+Request finished in 17.2135ms 204 
+Request starting HTTP/2.0 GET https://localhost:44363/GetRole  
+Successfully validated the token.
+CORS policy execution successful.
+Executing endpoint 'ApiDemoMC.Controllers.AccountController.GetRole (ApiDemoMC)'
+Route matched with {action = "GetRole", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[ApiDemoMC.DTO.MailRoleDTO] GetRole() on controller ApiDemoMC.Controllers.AccountController (ApiDemoMC).
+Authorization was successful.
+Executing action method ApiDemoMC.Controllers.AccountController.GetRole (ApiDemoMC) - Validation state: Valid
+Entity Framework Core 2.2.6-servicing-10079 initialized 'MC_ContextDb' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (2ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Discriminator], [e].[IsDelete], [e].[Mail], [e].[Name], [e].[Pass], [e].[RoleId], [e].[Phone], [e].[EndDateLicens], [e].[LicensNumber], [e].[Qualification], [e].[StartDateLicens], [e].[Bank_Kor_Sch], [e].[Bank_Rasch_Sch], [e].[Bik_Bank], [e].[FIO], [e].[GradationFIO], [e].[INN], [e].[KPP], [e].[Kor_Sch], [e].[Main_Document], [e].[UrAgent_Phone], [e].[Rasch_Sch], [e].[Ur_Adress]
+FROM [Users] AS [e]
+WHERE [e].[Discriminator] IN (N'UrAgent', N'Buhgalter', N'Agent', N'Admin', N'User') AND ([e].[Id] = @__get_Item_0)
+Executed action method ApiDemoMC.Controllers.AccountController.GetRole (ApiDemoMC), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 20.0511ms.
+Executing ObjectResult, writing value of type 'ApiDemoMC.DTO.MailRoleDTO'.
+Executed action ApiDemoMC.Controllers.AccountController.GetRole (ApiDemoMC) in 53.9335ms
+Executed endpoint 'ApiDemoMC.Controllers.AccountController.GetRole (ApiDemoMC)'
+Request finished in 123.2431ms 200 application/json; charset=utf-8
+Request starting HTTP/2.0 GET https://localhost:44363/Service  
+CORS policy execution successful.
+Executing endpoint 'ApiDemoMC.Controllers.ServiceController.Get (ApiDemoMC)'
+Route matched with {action = "Get", controller = "Service"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[DataAccessLibrary.Service] Get() on controller ApiDemoMC.Controllers.ServiceController (ApiDemoMC).
+Executing action method ApiDemoMC.Controllers.ServiceController.Get (ApiDemoMC) - Validation state: Valid
+Entity Framework Core 2.2.6-servicing-10079 initialized 'MC_ContextDb' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (123ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[Cost], [s].[IsDelete], [s].[Name]
+FROM [Service] AS [s]
+WHERE [s].[IsDelete] = 0
+Executed action method ApiDemoMC.Controllers.ServiceController.Get (ApiDemoMC), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 148.3341ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DataAccessLibrary.Service, DataAccessLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action ApiDemoMC.Controllers.ServiceController.Get (ApiDemoMC) in 175.8474ms
+Executed endpoint 'ApiDemoMC.Controllers.ServiceController.Get (ApiDemoMC)'
+Request finished in 229.3559ms 200 application/json; charset=utf-8
+Request starting HTTP/2.0 OPTIONS https://localhost:44363/GetRole  
+CORS policy execution successful.
+Request finished in 24.1967ms 204 
+Request starting HTTP/2.0 GET https://localhost:44363/GetRole  
+Successfully validated the token.
+CORS policy execution successful.
+Executing endpoint 'ApiDemoMC.Controllers.AccountController.GetRole (ApiDemoMC)'
+Route matched with {action = "GetRole", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[ApiDemoMC.DTO.MailRoleDTO] GetRole() on controller ApiDemoMC.Controllers.AccountController (ApiDemoMC).
+Authorization was successful.
+Executing action method ApiDemoMC.Controllers.AccountController.GetRole (ApiDemoMC) - Validation state: Valid
+Entity Framework Core 2.2.6-servicing-10079 initialized 'MC_ContextDb' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (2ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Discriminator], [e].[IsDelete], [e].[Mail], [e].[Name], [e].[Pass], [e].[RoleId], [e].[Phone], [e].[EndDateLicens], [e].[LicensNumber], [e].[Qualification], [e].[StartDateLicens], [e].[Bank_Kor_Sch], [e].[Bank_Rasch_Sch], [e].[Bik_Bank], [e].[FIO], [e].[GradationFIO], [e].[INN], [e].[KPP], [e].[Kor_Sch], [e].[Main_Document], [e].[UrAgent_Phone], [e].[Rasch_Sch], [e].[Ur_Adress]
+FROM [Users] AS [e]
+WHERE [e].[Discriminator] IN (N'UrAgent', N'Buhgalter', N'Agent', N'Admin', N'User') AND ([e].[Id] = @__get_Item_0)
+Executed action method ApiDemoMC.Controllers.AccountController.GetRole (ApiDemoMC), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 22.016ms.
+Executing ObjectResult, writing value of type 'ApiDemoMC.DTO.MailRoleDTO'.
+Executed action ApiDemoMC.Controllers.AccountController.GetRole (ApiDemoMC) in 59.0871ms
+Executed endpoint 'ApiDemoMC.Controllers.AccountController.GetRole (ApiDemoMC)'
+Request finished in 131.7915ms 200 application/json; charset=utf-8
+Request starting HTTP/2.0 OPTIONS https://localhost:44363/GetRole  
+CORS policy execution successful.
+Request finished in 19.0331ms 204 
+Request starting HTTP/2.0 GET https://localhost:44363/GetRole  
+Successfully validated the token.
+CORS policy execution successful.
+Executing endpoint 'ApiDemoMC.Controllers.AccountController.GetRole (ApiDemoMC)'
+Route matched with {action = "GetRole", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[ApiDemoMC.DTO.MailRoleDTO] GetRole() on controller ApiDemoMC.Controllers.AccountController (ApiDemoMC).
+Authorization was successful.
+Executing action method ApiDemoMC.Controllers.AccountController.GetRole (ApiDemoMC) - Validation state: Valid
+Entity Framework Core 2.2.6-servicing-10079 initialized 'MC_ContextDb' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Discriminator], [e].[IsDelete], [e].[Mail], [e].[Name], [e].[Pass], [e].[RoleId], [e].[Phone], [e].[EndDateLicens], [e].[LicensNumber], [e].[Qualification], [e].[StartDateLicens], [e].[Bank_Kor_Sch], [e].[Bank_Rasch_Sch], [e].[Bik_Bank], [e].[FIO], [e].[GradationFIO], [e].[INN], [e].[KPP], [e].[Kor_Sch], [e].[Main_Document], [e].[UrAgent_Phone], [e].[Rasch_Sch], [e].[Ur_Adress]
+FROM [Users] AS [e]
+WHERE [e].[Discriminator] IN (N'UrAgent', N'Buhgalter', N'Agent', N'Admin', N'User') AND ([e].[Id] = @__get_Item_0)
+Executed action method ApiDemoMC.Controllers.AccountController.GetRole (ApiDemoMC), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 19.6851ms.
+Executing ObjectResult, writing value of type 'ApiDemoMC.DTO.MailRoleDTO'.
+Executed action ApiDemoMC.Controllers.AccountController.GetRole (ApiDemoMC) in 55.5721ms
+Executed endpoint 'ApiDemoMC.Controllers.AccountController.GetRole (ApiDemoMC)'
+Request finished in 129.5843ms 200 application/json; charset=utf-8
+Request starting HTTP/2.0 OPTIONS https://localhost:44363/login  
+CORS policy execution successful.
+Request finished in 19.2694ms 204 
+Request starting HTTP/2.0 POST https://localhost:44363/login application/json;charset=utf-8 43
+CORS policy execution successful.
+Executing endpoint 'ApiDemoMC.Controllers.AccountController.Login (ApiDemoMC)'
+Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Login(DataAccessLibrary.LoginPassDTO) on controller ApiDemoMC.Controllers.AccountController (ApiDemoMC).
+Executing action method ApiDemoMC.Controllers.AccountController.Login (ApiDemoMC) - Validation state: Valid
+
+
+28.11.2019 13:02:55 Start login user test@mail.ru 
+
+Entity Framework Core 2.2.6-servicing-10079 initialized 'MC_ContextDb' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (0ms) [Parameters=[@__value_Email_0='?' (Size = 4000), @__Convert_1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Discriminator], [u].[IsDelete], [u].[Mail], [u].[Name], [u].[Pass], [u].[RoleId], [u].[Phone], [u].[EndDateLicens], [u].[LicensNumber], [u].[Qualification], [u].[StartDateLicens], [u].[Bank_Kor_Sch], [u].[Bank_Rasch_Sch], [u].[Bik_Bank], [u].[FIO], [u].[GradationFIO], [u].[INN], [u].[KPP], [u].[Kor_Sch], [u].[Main_Document], [u].[UrAgent_Phone], [u].[Rasch_Sch], [u].[Ur_Adress]
+FROM [Users] AS [u]
+WHERE [u].[Discriminator] IN (N'UrAgent', N'Buhgalter', N'Agent', N'Admin', N'User') AND (([u].[Mail] = @__value_Email_0) AND ([u].[Pass] = @__Convert_1))
+
+Login Ok 
+
+Executed action method ApiDemoMC.Controllers.AccountController.Login (ApiDemoMC), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 34.365ms.
+Executing ObjectResult, writing value of type 'System.String'.
+Executed action ApiDemoMC.Controllers.AccountController.Login (ApiDemoMC) in 58.2888ms
+Executed endpoint 'ApiDemoMC.Controllers.AccountController.Login (ApiDemoMC)'
+Request finished in 120.2753ms 200 text/plain; charset=utf-8
+Request starting HTTP/2.0 OPTIONS https://localhost:44363/GetRole  
+CORS policy execution successful.
+Request finished in 18.3373ms 204 
+Request starting HTTP/2.0 GET https://localhost:44363/GetRole  
+Successfully validated the token.
+CORS policy execution successful.
+Executing endpoint 'ApiDemoMC.Controllers.AccountController.GetRole (ApiDemoMC)'
+Route matched with {action = "GetRole", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[ApiDemoMC.DTO.MailRoleDTO] GetRole() on controller ApiDemoMC.Controllers.AccountController (ApiDemoMC).
+Authorization was successful.
+Executing action method ApiDemoMC.Controllers.AccountController.GetRole (ApiDemoMC) - Validation state: Valid
+Entity Framework Core 2.2.6-servicing-10079 initialized 'MC_ContextDb' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (2ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Discriminator], [e].[IsDelete], [e].[Mail], [e].[Name], [e].[Pass], [e].[RoleId], [e].[Phone], [e].[EndDateLicens], [e].[LicensNumber], [e].[Qualification], [e].[StartDateLicens], [e].[Bank_Kor_Sch], [e].[Bank_Rasch_Sch], [e].[Bik_Bank], [e].[FIO], [e].[GradationFIO], [e].[INN], [e].[KPP], [e].[Kor_Sch], [e].[Main_Document], [e].[UrAgent_Phone], [e].[Rasch_Sch], [e].[Ur_Adress]
+FROM [Users] AS [e]
+WHERE [e].[Discriminator] IN (N'UrAgent', N'Buhgalter', N'Agent', N'Admin', N'User') AND ([e].[Id] = @__get_Item_0)
+Executed action method ApiDemoMC.Controllers.AccountController.GetRole (ApiDemoMC), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 19.3391ms.
+Executing ObjectResult, writing value of type 'ApiDemoMC.DTO.MailRoleDTO'.
+Executed action ApiDemoMC.Controllers.AccountController.GetRole (ApiDemoMC) in 51.9395ms
+Executed endpoint 'ApiDemoMC.Controllers.AccountController.GetRole (ApiDemoMC)'
+Request finished in 115.3822ms 200 application/json; charset=utf-8
+Request starting HTTP/2.0 OPTIONS https://localhost:44363/Migrant/GetUserMigrantList  
+CORS policy execution successful.
+Request finished in 17.1283ms 204 
+Request starting HTTP/2.0 GET https://localhost:44363/Migrant/GetUserMigrantList  
+Successfully validated the token.
+CORS policy execution successful.
+Executing endpoint 'ApiDemoMC.Controllers.MigrantController.GetUserMigrantList (ApiDemoMC)'
+Route matched with {action = "GetUserMigrantList", controller = "Migrant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[DataAccessLibrary.Migrant]]] GetUserMigrantList() on controller ApiDemoMC.Controllers.MigrantController (ApiDemoMC).
+Authorization was successful.
+Executing action method ApiDemoMC.Controllers.MigrantController.GetUserMigrantList (ApiDemoMC) - Validation state: Valid
+Entity Framework Core 2.2.6-servicing-10079 initialized 'MC_ContextDb' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (2ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Discriminator], [e].[IsDelete], [e].[Mail], [e].[Name], [e].[Pass], [e].[RoleId], [e].[Phone], [e].[EndDateLicens], [e].[LicensNumber], [e].[Qualification], [e].[StartDateLicens], [e].[Bank_Kor_Sch], [e].[Bank_Rasch_Sch], [e].[Bik_Bank], [e].[FIO], [e].[GradationFIO], [e].[INN], [e].[KPP], [e].[Kor_Sch], [e].[Main_Document], [e].[UrAgent_Phone], [e].[Rasch_Sch], [e].[Ur_Adress]
+FROM [Users] AS [e]
+WHERE [e].[Discriminator] IN (N'UrAgent', N'Buhgalter', N'Agent', N'Admin', N'User') AND ([e].[Id] = @__get_Item_0)
+Executed DbCommand (0ms) [Parameters=[@__user_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [p].[UserId], [p].[MigrantId]
+FROM [UserMigrant] AS [p]
+WHERE [p].[UserId] = @__user_Id_0
+Executed DbCommand (7ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed action method ApiDemoMC.Controllers.MigrantController.GetUserMigrantList (ApiDemoMC), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 183.5645ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DataAccessLibrary.Migrant, DataAccessLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action ApiDemoMC.Controllers.MigrantController.GetUserMigrantList (ApiDemoMC) in 219.3322ms
+Executed endpoint 'ApiDemoMC.Controllers.MigrantController.GetUserMigrantList (ApiDemoMC)'
+Request finished in 286.8077ms 200 application/json; charset=utf-8
+Request starting HTTP/2.0 OPTIONS https://localhost:44363/Migrant/AddDelMigrant/19  
+CORS policy execution successful.
+Request finished in 21.5818ms 204 
+Request starting HTTP/2.0 DELETE https://localhost:44363/Migrant/AddDelMigrant/19  
+Successfully validated the token.
+CORS policy execution successful.
+Executing endpoint 'ApiDemoMC.Controllers.MigrantController.Delete (ApiDemoMC)'
+Route matched with {action = "Delete", controller = "Migrant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Delete(Int32) on controller ApiDemoMC.Controllers.MigrantController (ApiDemoMC).
+Authorization was successful.
+Executing action method ApiDemoMC.Controllers.MigrantController.Delete (ApiDemoMC) - Validation state: Valid
+Entity Framework Core 2.2.6-servicing-10079 initialized 'MC_ContextDb' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (2ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Boolean)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Migrant] SET [IsDelite] = @p0
+WHERE [Id] = @p1;
+SELECT @@ROWCOUNT;
+Executed action method ApiDemoMC.Controllers.MigrantController.Delete (ApiDemoMC), returned result Microsoft.AspNetCore.Mvc.OkResult in 2043.3273ms.
+Executing HttpStatusCodeResult, setting HTTP status code 200
+Executed action ApiDemoMC.Controllers.MigrantController.Delete (ApiDemoMC) in 2081.3844ms
+Executed endpoint 'ApiDemoMC.Controllers.MigrantController.Delete (ApiDemoMC)'
+Request finished in 2150.2583ms 200 
+Request starting HTTP/2.0 OPTIONS https://localhost:44363/Migrant/GetUserMigrantList  
+CORS policy execution successful.
+Request finished in 17.7705ms 204 
+Request starting HTTP/2.0 GET https://localhost:44363/Migrant/GetUserMigrantList  
+Successfully validated the token.
+CORS policy execution successful.
+Executing endpoint 'ApiDemoMC.Controllers.MigrantController.GetUserMigrantList (ApiDemoMC)'
+Route matched with {action = "GetUserMigrantList", controller = "Migrant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[DataAccessLibrary.Migrant]]] GetUserMigrantList() on controller ApiDemoMC.Controllers.MigrantController (ApiDemoMC).
+Authorization was successful.
+Executing action method ApiDemoMC.Controllers.MigrantController.GetUserMigrantList (ApiDemoMC) - Validation state: Valid
+Entity Framework Core 2.2.6-servicing-10079 initialized 'MC_ContextDb' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Discriminator], [e].[IsDelete], [e].[Mail], [e].[Name], [e].[Pass], [e].[RoleId], [e].[Phone], [e].[EndDateLicens], [e].[LicensNumber], [e].[Qualification], [e].[StartDateLicens], [e].[Bank_Kor_Sch], [e].[Bank_Rasch_Sch], [e].[Bik_Bank], [e].[FIO], [e].[GradationFIO], [e].[INN], [e].[KPP], [e].[Kor_Sch], [e].[Main_Document], [e].[UrAgent_Phone], [e].[Rasch_Sch], [e].[Ur_Adress]
+FROM [Users] AS [e]
+WHERE [e].[Discriminator] IN (N'UrAgent', N'Buhgalter', N'Agent', N'Admin', N'User') AND ([e].[Id] = @__get_Item_0)
+Executed DbCommand (0ms) [Parameters=[@__user_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [p].[UserId], [p].[MigrantId]
+FROM [UserMigrant] AS [p]
+WHERE [p].[UserId] = @__user_Id_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed action method ApiDemoMC.Controllers.MigrantController.GetUserMigrantList (ApiDemoMC), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 164.9048ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DataAccessLibrary.Migrant, DataAccessLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action ApiDemoMC.Controllers.MigrantController.GetUserMigrantList (ApiDemoMC) in 201.0577ms
+Executed endpoint 'ApiDemoMC.Controllers.MigrantController.GetUserMigrantList (ApiDemoMC)'
+Request finished in 268.2775ms 200 application/json; charset=utf-8
+Request starting HTTP/2.0 OPTIONS https://localhost:44363/Migrant/AddDelMigrant/49  
+CORS policy execution successful.
+Request finished in 18.3696ms 204 
+Request starting HTTP/2.0 DELETE https://localhost:44363/Migrant/AddDelMigrant/49  
+Successfully validated the token.
+CORS policy execution successful.
+Executing endpoint 'ApiDemoMC.Controllers.MigrantController.Delete (ApiDemoMC)'
+Route matched with {action = "Delete", controller = "Migrant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Delete(Int32) on controller ApiDemoMC.Controllers.MigrantController (ApiDemoMC).
+Authorization was successful.
+Executing action method ApiDemoMC.Controllers.MigrantController.Delete (ApiDemoMC) - Validation state: Valid
+Entity Framework Core 2.2.6-servicing-10079 initialized 'MC_ContextDb' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Boolean)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Migrant] SET [IsDelite] = @p0
+WHERE [Id] = @p1;
+SELECT @@ROWCOUNT;
+Executed action method ApiDemoMC.Controllers.MigrantController.Delete (ApiDemoMC), returned result Microsoft.AspNetCore.Mvc.OkResult in 29.885ms.
+Executing HttpStatusCodeResult, setting HTTP status code 200
+Executed action ApiDemoMC.Controllers.MigrantController.Delete (ApiDemoMC) in 64.7866ms
+Executed endpoint 'ApiDemoMC.Controllers.MigrantController.Delete (ApiDemoMC)'
+Request finished in 136.5606ms 200 
+Request starting HTTP/2.0 OPTIONS https://localhost:44363/Migrant/GetUserMigrantList  
+CORS policy execution successful.
+Request finished in 18.2997ms 204 
+Request starting HTTP/2.0 GET https://localhost:44363/Migrant/GetUserMigrantList  
+Successfully validated the token.
+CORS policy execution successful.
+Executing endpoint 'ApiDemoMC.Controllers.MigrantController.GetUserMigrantList (ApiDemoMC)'
+Route matched with {action = "GetUserMigrantList", controller = "Migrant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[DataAccessLibrary.Migrant]]] GetUserMigrantList() on controller ApiDemoMC.Controllers.MigrantController (ApiDemoMC).
+Authorization was successful.
+Executing action method ApiDemoMC.Controllers.MigrantController.GetUserMigrantList (ApiDemoMC) - Validation state: Valid
+Entity Framework Core 2.2.6-servicing-10079 initialized 'MC_ContextDb' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (2ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Discriminator], [e].[IsDelete], [e].[Mail], [e].[Name], [e].[Pass], [e].[RoleId], [e].[Phone], [e].[EndDateLicens], [e].[LicensNumber], [e].[Qualification], [e].[StartDateLicens], [e].[Bank_Kor_Sch], [e].[Bank_Rasch_Sch], [e].[Bik_Bank], [e].[FIO], [e].[GradationFIO], [e].[INN], [e].[KPP], [e].[Kor_Sch], [e].[Main_Document], [e].[UrAgent_Phone], [e].[Rasch_Sch], [e].[Ur_Adress]
+FROM [Users] AS [e]
+WHERE [e].[Discriminator] IN (N'UrAgent', N'Buhgalter', N'Agent', N'Admin', N'User') AND ([e].[Id] = @__get_Item_0)
+Executed DbCommand (0ms) [Parameters=[@__user_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [p].[UserId], [p].[MigrantId]
+FROM [UserMigrant] AS [p]
+WHERE [p].[UserId] = @__user_Id_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed action method ApiDemoMC.Controllers.MigrantController.GetUserMigrantList (ApiDemoMC), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 161.4224ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DataAccessLibrary.Migrant, DataAccessLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action ApiDemoMC.Controllers.MigrantController.GetUserMigrantList (ApiDemoMC) in 198.5057ms
+Executed endpoint 'ApiDemoMC.Controllers.MigrantController.GetUserMigrantList (ApiDemoMC)'
+Request finished in 269.2215ms 200 application/json; charset=utf-8
+Request starting HTTP/2.0 OPTIONS https://localhost:44363/Migrant/AddDelMigrant/41  
+CORS policy execution successful.
+Request finished in 18.6822ms 204 
+Request starting HTTP/2.0 DELETE https://localhost:44363/Migrant/AddDelMigrant/41  
+Successfully validated the token.
+CORS policy execution successful.
+Executing endpoint 'ApiDemoMC.Controllers.MigrantController.Delete (ApiDemoMC)'
+Route matched with {action = "Delete", controller = "Migrant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Delete(Int32) on controller ApiDemoMC.Controllers.MigrantController (ApiDemoMC).
+Authorization was successful.
+Executing action method ApiDemoMC.Controllers.MigrantController.Delete (ApiDemoMC) - Validation state: Valid
+Entity Framework Core 2.2.6-servicing-10079 initialized 'MC_ContextDb' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (2ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Boolean)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Migrant] SET [IsDelite] = @p0
+WHERE [Id] = @p1;
+SELECT @@ROWCOUNT;
+Executed action method ApiDemoMC.Controllers.MigrantController.Delete (ApiDemoMC), returned result Microsoft.AspNetCore.Mvc.OkResult in 41.9216ms.
+Executing HttpStatusCodeResult, setting HTTP status code 200
+Executed action ApiDemoMC.Controllers.MigrantController.Delete (ApiDemoMC) in 78.5405ms
+Executed endpoint 'ApiDemoMC.Controllers.MigrantController.Delete (ApiDemoMC)'
+Request finished in 144.8454ms 200 
+Request starting HTTP/2.0 OPTIONS https://localhost:44363/Migrant/GetUserMigrantList  
+CORS policy execution successful.
+Request finished in 17.5339ms 204 
+Request starting HTTP/2.0 GET https://localhost:44363/Migrant/GetUserMigrantList  
+Successfully validated the token.
+CORS policy execution successful.
+Executing endpoint 'ApiDemoMC.Controllers.MigrantController.GetUserMigrantList (ApiDemoMC)'
+Route matched with {action = "GetUserMigrantList", controller = "Migrant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[DataAccessLibrary.Migrant]]] GetUserMigrantList() on controller ApiDemoMC.Controllers.MigrantController (ApiDemoMC).
+Authorization was successful.
+Executing action method ApiDemoMC.Controllers.MigrantController.GetUserMigrantList (ApiDemoMC) - Validation state: Valid
+Entity Framework Core 2.2.6-servicing-10079 initialized 'MC_ContextDb' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Discriminator], [e].[IsDelete], [e].[Mail], [e].[Name], [e].[Pass], [e].[RoleId], [e].[Phone], [e].[EndDateLicens], [e].[LicensNumber], [e].[Qualification], [e].[StartDateLicens], [e].[Bank_Kor_Sch], [e].[Bank_Rasch_Sch], [e].[Bik_Bank], [e].[FIO], [e].[GradationFIO], [e].[INN], [e].[KPP], [e].[Kor_Sch], [e].[Main_Document], [e].[UrAgent_Phone], [e].[Rasch_Sch], [e].[Ur_Adress]
+FROM [Users] AS [e]
+WHERE [e].[Discriminator] IN (N'UrAgent', N'Buhgalter', N'Agent', N'Admin', N'User') AND ([e].[Id] = @__get_Item_0)
+Executed DbCommand (0ms) [Parameters=[@__user_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [p].[UserId], [p].[MigrantId]
+FROM [UserMigrant] AS [p]
+WHERE [p].[UserId] = @__user_Id_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed action method ApiDemoMC.Controllers.MigrantController.GetUserMigrantList (ApiDemoMC), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 160.1225ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DataAccessLibrary.Migrant, DataAccessLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action ApiDemoMC.Controllers.MigrantController.GetUserMigrantList (ApiDemoMC) in 194.774ms
+Executed endpoint 'ApiDemoMC.Controllers.MigrantController.GetUserMigrantList (ApiDemoMC)'
+Request finished in 263.8873ms 200 application/json; charset=utf-8
+Request starting HTTP/2.0 OPTIONS https://localhost:44363/login  
+CORS policy execution successful.
+Request finished in 20.8068ms 204 
+Request starting HTTP/2.0 POST https://localhost:44363/login application/json;charset=utf-8 36
+CORS policy execution successful.
+Executing endpoint 'ApiDemoMC.Controllers.AccountController.Login (ApiDemoMC)'
+Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Login(DataAccessLibrary.LoginPassDTO) on controller ApiDemoMC.Controllers.AccountController (ApiDemoMC).
+Executing action method ApiDemoMC.Controllers.AccountController.Login (ApiDemoMC) - Validation state: Valid
+
+
+28.11.2019 13:03:36 Start login user admin 
+
+Entity Framework Core 2.2.6-servicing-10079 initialized 'MC_ContextDb' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (0ms) [Parameters=[@__value_Email_0='?' (Size = 4000), @__Convert_1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Discriminator], [u].[IsDelete], [u].[Mail], [u].[Name], [u].[Pass], [u].[RoleId], [u].[Phone], [u].[EndDateLicens], [u].[LicensNumber], [u].[Qualification], [u].[StartDateLicens], [u].[Bank_Kor_Sch], [u].[Bank_Rasch_Sch], [u].[Bik_Bank], [u].[FIO], [u].[GradationFIO], [u].[INN], [u].[KPP], [u].[Kor_Sch], [u].[Main_Document], [u].[UrAgent_Phone], [u].[Rasch_Sch], [u].[Ur_Adress]
+FROM [Users] AS [u]
+WHERE [u].[Discriminator] IN (N'UrAgent', N'Buhgalter', N'Agent', N'Admin', N'User') AND (([u].[Mail] = @__value_Email_0) AND ([u].[Pass] = @__Convert_1))
+
+Login Ok 
+
+Executed action method ApiDemoMC.Controllers.AccountController.Login (ApiDemoMC), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 37.9649ms.
+Executing ObjectResult, writing value of type 'System.String'.
+Executed action ApiDemoMC.Controllers.AccountController.Login (ApiDemoMC) in 62.9283ms
+Executed endpoint 'ApiDemoMC.Controllers.AccountController.Login (ApiDemoMC)'
+Request finished in 128.529ms 200 text/plain; charset=utf-8
+Request starting HTTP/2.0 OPTIONS https://localhost:44363/GetRole  
+CORS policy execution successful.
+Request finished in 17.4794ms 204 
+Request starting HTTP/2.0 GET https://localhost:44363/GetRole  
+Successfully validated the token.
+CORS policy execution successful.
+Executing endpoint 'ApiDemoMC.Controllers.AccountController.GetRole (ApiDemoMC)'
+Route matched with {action = "GetRole", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[ApiDemoMC.DTO.MailRoleDTO] GetRole() on controller ApiDemoMC.Controllers.AccountController (ApiDemoMC).
+Authorization was successful.
+Executing action method ApiDemoMC.Controllers.AccountController.GetRole (ApiDemoMC) - Validation state: Valid
+Entity Framework Core 2.2.6-servicing-10079 initialized 'MC_ContextDb' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Discriminator], [e].[IsDelete], [e].[Mail], [e].[Name], [e].[Pass], [e].[RoleId], [e].[Phone], [e].[EndDateLicens], [e].[LicensNumber], [e].[Qualification], [e].[StartDateLicens], [e].[Bank_Kor_Sch], [e].[Bank_Rasch_Sch], [e].[Bik_Bank], [e].[FIO], [e].[GradationFIO], [e].[INN], [e].[KPP], [e].[Kor_Sch], [e].[Main_Document], [e].[UrAgent_Phone], [e].[Rasch_Sch], [e].[Ur_Adress]
+FROM [Users] AS [e]
+WHERE [e].[Discriminator] IN (N'UrAgent', N'Buhgalter', N'Agent', N'Admin', N'User') AND ([e].[Id] = @__get_Item_0)
+Executed action method ApiDemoMC.Controllers.AccountController.GetRole (ApiDemoMC), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 21.3428ms.
+Executing ObjectResult, writing value of type 'ApiDemoMC.DTO.MailRoleDTO'.
+Executed action ApiDemoMC.Controllers.AccountController.GetRole (ApiDemoMC) in 54.537ms
+Executed endpoint 'ApiDemoMC.Controllers.AccountController.GetRole (ApiDemoMC)'
+Request finished in 120.3115ms 200 application/json; charset=utf-8
+Request starting HTTP/2.0 OPTIONS https://localhost:44363/Migrant  
+CORS policy execution successful.
+Request finished in 16.551ms 204 
+Request starting HTTP/2.0 GET https://localhost:44363/Migrant  
+Successfully validated the token.
+CORS policy execution successful.
+Executing endpoint 'ApiDemoMC.Controllers.MigrantController.Get (ApiDemoMC)'
+Route matched with {action = "Get", controller = "Migrant"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[DataAccessLibrary.Migrant]] Get() on controller ApiDemoMC.Controllers.MigrantController (ApiDemoMC).
+Authorization was successful.
+Executing action method ApiDemoMC.Controllers.MigrantController.Get (ApiDemoMC) - Validation state: Valid
+Entity Framework Core 2.2.6-servicing-10079 initialized 'MC_ContextDb' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [m].[Id], [m].[IsDelite], [m].[Name], [m].[PassNumber], [m].[PassSerri], [m].[Patronymic], [m].[Surname]
+FROM [Migrant] AS [m]
+WHERE [m].[Id] > 0
+Executed action method ApiDemoMC.Controllers.MigrantController.Get (ApiDemoMC), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 24.0022ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DataAccessLibrary.Migrant, DataAccessLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action ApiDemoMC.Controllers.MigrantController.Get (ApiDemoMC) in 59.541ms
+Executed endpoint 'ApiDemoMC.Controllers.MigrantController.Get (ApiDemoMC)'
+Request finished in 122.8951ms 200 application/json; charset=utf-8
+Request starting HTTP/2.0 OPTIONS https://localhost:44363/Migrant/AddDelMigrant/41  
+CORS policy execution successful.
+Request finished in 18.1592ms 204 
+Request starting HTTP/2.0 DELETE https://localhost:44363/Migrant/AddDelMigrant/41  
+Successfully validated the token.
+CORS policy execution successful.
+Executing endpoint 'ApiDemoMC.Controllers.MigrantController.Delete (ApiDemoMC)'
+Route matched with {action = "Delete", controller = "Migrant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Delete(Int32) on controller ApiDemoMC.Controllers.MigrantController (ApiDemoMC).
+Authorization was successful.
+Executing action method ApiDemoMC.Controllers.MigrantController.Delete (ApiDemoMC) - Validation state: Valid
+Entity Framework Core 2.2.6-servicing-10079 initialized 'MC_ContextDb' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Boolean)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Migrant] SET [IsDelite] = @p0
+WHERE [Id] = @p1;
+SELECT @@ROWCOUNT;
+Executed action method ApiDemoMC.Controllers.MigrantController.Delete (ApiDemoMC), returned result Microsoft.AspNetCore.Mvc.OkResult in 31.561ms.
+Executing HttpStatusCodeResult, setting HTTP status code 200
+Executed action ApiDemoMC.Controllers.MigrantController.Delete (ApiDemoMC) in 67.976ms
+Executed endpoint 'ApiDemoMC.Controllers.MigrantController.Delete (ApiDemoMC)'
+Request finished in 133.6453ms 200 
+Request starting HTTP/2.0 OPTIONS https://localhost:44363/Migrant  
+CORS policy execution successful.
+Request finished in 17.7492ms 204 
+Request starting HTTP/2.0 GET https://localhost:44363/Migrant  
+Successfully validated the token.
+CORS policy execution successful.
+Executing endpoint 'ApiDemoMC.Controllers.MigrantController.Get (ApiDemoMC)'
+Route matched with {action = "Get", controller = "Migrant"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[DataAccessLibrary.Migrant]] Get() on controller ApiDemoMC.Controllers.MigrantController (ApiDemoMC).
+Authorization was successful.
+Executing action method ApiDemoMC.Controllers.MigrantController.Get (ApiDemoMC) - Validation state: Valid
+Entity Framework Core 2.2.6-servicing-10079 initialized 'MC_ContextDb' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [m].[Id], [m].[IsDelite], [m].[Name], [m].[PassNumber], [m].[PassSerri], [m].[Patronymic], [m].[Surname]
+FROM [Migrant] AS [m]
+WHERE [m].[Id] > 0
+Executed action method ApiDemoMC.Controllers.MigrantController.Get (ApiDemoMC), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 18.2627ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DataAccessLibrary.Migrant, DataAccessLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action ApiDemoMC.Controllers.MigrantController.Get (ApiDemoMC) in 52.9204ms
+Executed endpoint 'ApiDemoMC.Controllers.MigrantController.Get (ApiDemoMC)'
+Request finished in 118.6826ms 200 application/json; charset=utf-8
+Request starting HTTP/2.0 OPTIONS https://localhost:44363/Migrant/AddDelMigrant/1054  
+CORS policy execution successful.
+Request finished in 19.458ms 204 
+Request starting HTTP/2.0 DELETE https://localhost:44363/Migrant/AddDelMigrant/1054  
+Successfully validated the token.
+CORS policy execution successful.
+Executing endpoint 'ApiDemoMC.Controllers.MigrantController.Delete (ApiDemoMC)'
+Route matched with {action = "Delete", controller = "Migrant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Delete(Int32) on controller ApiDemoMC.Controllers.MigrantController (ApiDemoMC).
+Authorization was successful.
+Executing action method ApiDemoMC.Controllers.MigrantController.Delete (ApiDemoMC) - Validation state: Valid
+Entity Framework Core 2.2.6-servicing-10079 initialized 'MC_ContextDb' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Boolean)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Migrant] SET [IsDelite] = @p0
+WHERE [Id] = @p1;
+SELECT @@ROWCOUNT;
+Executed action method ApiDemoMC.Controllers.MigrantController.Delete (ApiDemoMC), returned result Microsoft.AspNetCore.Mvc.OkResult in 31.0089ms.
+Executing HttpStatusCodeResult, setting HTTP status code 200
+Executed action ApiDemoMC.Controllers.MigrantController.Delete (ApiDemoMC) in 67.9662ms
+Executed endpoint 'ApiDemoMC.Controllers.MigrantController.Delete (ApiDemoMC)'
+Request finished in 134.5177ms 200 
+Request starting HTTP/2.0 OPTIONS https://localhost:44363/Migrant  
+CORS policy execution successful.
+Request finished in 17.4555ms 204 
+Request starting HTTP/2.0 GET https://localhost:44363/Migrant  
+Successfully validated the token.
+CORS policy execution successful.
+Executing endpoint 'ApiDemoMC.Controllers.MigrantController.Get (ApiDemoMC)'
+Route matched with {action = "Get", controller = "Migrant"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[DataAccessLibrary.Migrant]] Get() on controller ApiDemoMC.Controllers.MigrantController (ApiDemoMC).
+Authorization was successful.
+Executing action method ApiDemoMC.Controllers.MigrantController.Get (ApiDemoMC) - Validation state: Valid
+Entity Framework Core 2.2.6-servicing-10079 initialized 'MC_ContextDb' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [m].[Id], [m].[IsDelite], [m].[Name], [m].[PassNumber], [m].[PassSerri], [m].[Patronymic], [m].[Surname]
+FROM [Migrant] AS [m]
+WHERE [m].[Id] > 0
+Executed action method ApiDemoMC.Controllers.MigrantController.Get (ApiDemoMC), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 18.9382ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DataAccessLibrary.Migrant, DataAccessLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action ApiDemoMC.Controllers.MigrantController.Get (ApiDemoMC) in 53.8949ms
+Executed endpoint 'ApiDemoMC.Controllers.MigrantController.Get (ApiDemoMC)'
+Request finished in 119.9616ms 200 application/json; charset=utf-8
+Request starting HTTP/2.0 OPTIONS https://localhost:44363/Migrant/AddDelMigrant/48  
+CORS policy execution successful.
+Request finished in 19.4323ms 204 
+Request starting HTTP/2.0 DELETE https://localhost:44363/Migrant/AddDelMigrant/48  
+Successfully validated the token.
+CORS policy execution successful.
+Executing endpoint 'ApiDemoMC.Controllers.MigrantController.Delete (ApiDemoMC)'
+Route matched with {action = "Delete", controller = "Migrant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Delete(Int32) on controller ApiDemoMC.Controllers.MigrantController (ApiDemoMC).
+Authorization was successful.
+Executing action method ApiDemoMC.Controllers.MigrantController.Delete (ApiDemoMC) - Validation state: Valid
+Entity Framework Core 2.2.6-servicing-10079 initialized 'MC_ContextDb' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Boolean)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Migrant] SET [IsDelite] = @p0
+WHERE [Id] = @p1;
+SELECT @@ROWCOUNT;
+Executed action method ApiDemoMC.Controllers.MigrantController.Delete (ApiDemoMC), returned result Microsoft.AspNetCore.Mvc.OkResult in 31.1526ms.
+Executing HttpStatusCodeResult, setting HTTP status code 200
+Executed action ApiDemoMC.Controllers.MigrantController.Delete (ApiDemoMC) in 68.4039ms
+Executed endpoint 'ApiDemoMC.Controllers.MigrantController.Delete (ApiDemoMC)'
+Request finished in 134.5267ms 200 
+Request starting HTTP/2.0 OPTIONS https://localhost:44363/Migrant  
+CORS policy execution successful.
+Request finished in 17.366ms 204 
+Request starting HTTP/2.0 GET https://localhost:44363/Migrant  
+Successfully validated the token.
+CORS policy execution successful.
+Executing endpoint 'ApiDemoMC.Controllers.MigrantController.Get (ApiDemoMC)'
+Route matched with {action = "Get", controller = "Migrant"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[DataAccessLibrary.Migrant]] Get() on controller ApiDemoMC.Controllers.MigrantController (ApiDemoMC).
+Authorization was successful.
+Executing action method ApiDemoMC.Controllers.MigrantController.Get (ApiDemoMC) - Validation state: Valid
+Entity Framework Core 2.2.6-servicing-10079 initialized 'MC_ContextDb' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [m].[Id], [m].[IsDelite], [m].[Name], [m].[PassNumber], [m].[PassSerri], [m].[Patronymic], [m].[Surname]
+FROM [Migrant] AS [m]
+WHERE [m].[Id] > 0
+Executed action method ApiDemoMC.Controllers.MigrantController.Get (ApiDemoMC), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 18.6117ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DataAccessLibrary.Migrant, DataAccessLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action ApiDemoMC.Controllers.MigrantController.Get (ApiDemoMC) in 53.7319ms
+Executed endpoint 'ApiDemoMC.Controllers.MigrantController.Get (ApiDemoMC)'
+Request finished in 121.1756ms 200 application/json; charset=utf-8
+Request starting HTTP/2.0 OPTIONS https://localhost:44363/Migrant/AddDelMigrant/49  
+CORS policy execution successful.
+Request finished in 18.1004ms 204 
+Request starting HTTP/2.0 DELETE https://localhost:44363/Migrant/AddDelMigrant/49  
+Successfully validated the token.
+CORS policy execution successful.
+Executing endpoint 'ApiDemoMC.Controllers.MigrantController.Delete (ApiDemoMC)'
+Route matched with {action = "Delete", controller = "Migrant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Delete(Int32) on controller ApiDemoMC.Controllers.MigrantController (ApiDemoMC).
+Authorization was successful.
+Executing action method ApiDemoMC.Controllers.MigrantController.Delete (ApiDemoMC) - Validation state: Valid
+Entity Framework Core 2.2.6-servicing-10079 initialized 'MC_ContextDb' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Boolean)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Migrant] SET [IsDelite] = @p0
+WHERE [Id] = @p1;
+SELECT @@ROWCOUNT;
+Executed action method ApiDemoMC.Controllers.MigrantController.Delete (ApiDemoMC), returned result Microsoft.AspNetCore.Mvc.OkResult in 31.5594ms.
+Executing HttpStatusCodeResult, setting HTTP status code 200
+Executed action ApiDemoMC.Controllers.MigrantController.Delete (ApiDemoMC) in 67.5133ms
+Executed endpoint 'ApiDemoMC.Controllers.MigrantController.Delete (ApiDemoMC)'
+Request finished in 133.4937ms 200 
+Request starting HTTP/2.0 OPTIONS https://localhost:44363/Migrant  
+CORS policy execution successful.
+Request finished in 18.0827ms 204 
+Request starting HTTP/2.0 GET https://localhost:44363/Migrant  
+Successfully validated the token.
+CORS policy execution successful.
+Executing endpoint 'ApiDemoMC.Controllers.MigrantController.Get (ApiDemoMC)'
+Route matched with {action = "Get", controller = "Migrant"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[DataAccessLibrary.Migrant]] Get() on controller ApiDemoMC.Controllers.MigrantController (ApiDemoMC).
+Authorization was successful.
+Executing action method ApiDemoMC.Controllers.MigrantController.Get (ApiDemoMC) - Validation state: Valid
+Entity Framework Core 2.2.6-servicing-10079 initialized 'MC_ContextDb' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [m].[Id], [m].[IsDelite], [m].[Name], [m].[PassNumber], [m].[PassSerri], [m].[Patronymic], [m].[Surname]
+FROM [Migrant] AS [m]
+WHERE [m].[Id] > 0
+Executed action method ApiDemoMC.Controllers.MigrantController.Get (ApiDemoMC), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 18.3893ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DataAccessLibrary.Migrant, DataAccessLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action ApiDemoMC.Controllers.MigrantController.Get (ApiDemoMC) in 53.9791ms
+Executed endpoint 'ApiDemoMC.Controllers.MigrantController.Get (ApiDemoMC)'
+Request finished in 125.992ms 200 application/json; charset=utf-8
+Request starting HTTP/2.0 OPTIONS https://localhost:44363/Migrant/AddDelMigrant/19  
+CORS policy execution successful.
+Request finished in 18.7261ms 204 
+Request starting HTTP/2.0 DELETE https://localhost:44363/Migrant/AddDelMigrant/19  
+Successfully validated the token.
+CORS policy execution successful.
+Executing endpoint 'ApiDemoMC.Controllers.MigrantController.Delete (ApiDemoMC)'
+Route matched with {action = "Delete", controller = "Migrant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Delete(Int32) on controller ApiDemoMC.Controllers.MigrantController (ApiDemoMC).
+Authorization was successful.
+Executing action method ApiDemoMC.Controllers.MigrantController.Delete (ApiDemoMC) - Validation state: Valid
+Entity Framework Core 2.2.6-servicing-10079 initialized 'MC_ContextDb' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Boolean)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Migrant] SET [IsDelite] = @p0
+WHERE [Id] = @p1;
+SELECT @@ROWCOUNT;
+Executed action method ApiDemoMC.Controllers.MigrantController.Delete (ApiDemoMC), returned result Microsoft.AspNetCore.Mvc.OkResult in 33.654ms.
+Executing HttpStatusCodeResult, setting HTTP status code 200
+Executed action ApiDemoMC.Controllers.MigrantController.Delete (ApiDemoMC) in 69.4511ms
+Executed endpoint 'ApiDemoMC.Controllers.MigrantController.Delete (ApiDemoMC)'
+Request finished in 136.2899ms 200 
+Request starting HTTP/2.0 OPTIONS https://localhost:44363/Migrant  
+CORS policy execution successful.
+Request finished in 18.5969ms 204 
+Request starting HTTP/2.0 GET https://localhost:44363/Migrant  
+Successfully validated the token.
+CORS policy execution successful.
+Executing endpoint 'ApiDemoMC.Controllers.MigrantController.Get (ApiDemoMC)'
+Route matched with {action = "Get", controller = "Migrant"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[DataAccessLibrary.Migrant]] Get() on controller ApiDemoMC.Controllers.MigrantController (ApiDemoMC).
+Authorization was successful.
+Executing action method ApiDemoMC.Controllers.MigrantController.Get (ApiDemoMC) - Validation state: Valid
+Entity Framework Core 2.2.6-servicing-10079 initialized 'MC_ContextDb' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [m].[Id], [m].[IsDelite], [m].[Name], [m].[PassNumber], [m].[PassSerri], [m].[Patronymic], [m].[Surname]
+FROM [Migrant] AS [m]
+WHERE [m].[Id] > 0
+Executed action method ApiDemoMC.Controllers.MigrantController.Get (ApiDemoMC), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 17.2396ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DataAccessLibrary.Migrant, DataAccessLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action ApiDemoMC.Controllers.MigrantController.Get (ApiDemoMC) in 52.0018ms
+Executed endpoint 'ApiDemoMC.Controllers.MigrantController.Get (ApiDemoMC)'
+Request finished in 118.3641ms 200 application/json; charset=utf-8
+Request starting HTTP/2.0 OPTIONS https://localhost:44363/Migrant/AddDelMigrant/9  
+CORS policy execution successful.
+Request finished in 18.5194ms 204 
+Request starting HTTP/2.0 DELETE https://localhost:44363/Migrant/AddDelMigrant/9  
+Successfully validated the token.
+CORS policy execution successful.
+Executing endpoint 'ApiDemoMC.Controllers.MigrantController.Delete (ApiDemoMC)'
+Route matched with {action = "Delete", controller = "Migrant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Delete(Int32) on controller ApiDemoMC.Controllers.MigrantController (ApiDemoMC).
+Authorization was successful.
+Executing action method ApiDemoMC.Controllers.MigrantController.Delete (ApiDemoMC) - Validation state: Valid
+Entity Framework Core 2.2.6-servicing-10079 initialized 'MC_ContextDb' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[IsDelite], [e].[Name], [e].[PassNumber], [e].[PassSerri], [e].[Patronymic], [e].[Surname]
+FROM [Migrant] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed DbCommand (1ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = Boolean)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Migrant] SET [IsDelite] = @p0
+WHERE [Id] = @p1;
+SELECT @@ROWCOUNT;
+Executed action method ApiDemoMC.Controllers.MigrantController.Delete (ApiDemoMC), returned result Microsoft.AspNetCore.Mvc.OkResult in 32.2143ms.
+Executing HttpStatusCodeResult, setting HTTP status code 200
+Executed action ApiDemoMC.Controllers.MigrantController.Delete (ApiDemoMC) in 75.1806ms
+Executed endpoint 'ApiDemoMC.Controllers.MigrantController.Delete (ApiDemoMC)'
+Request finished in 143.2156ms 200 
+Request starting HTTP/2.0 OPTIONS https://localhost:44363/Migrant  
+CORS policy execution successful.
+Request finished in 20.983ms 204 
+Request starting HTTP/2.0 GET https://localhost:44363/Migrant  
+Successfully validated the token.
+CORS policy execution successful.
+Executing endpoint 'ApiDemoMC.Controllers.MigrantController.Get (ApiDemoMC)'
+Route matched with {action = "Get", controller = "Migrant"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[DataAccessLibrary.Migrant]] Get() on controller ApiDemoMC.Controllers.MigrantController (ApiDemoMC).
+Authorization was successful.
+Executing action method ApiDemoMC.Controllers.MigrantController.Get (ApiDemoMC) - Validation state: Valid
+Entity Framework Core 2.2.6-servicing-10079 initialized 'MC_ContextDb' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [m].[Id], [m].[IsDelite], [m].[Name], [m].[PassNumber], [m].[PassSerri], [m].[Patronymic], [m].[Surname]
+FROM [Migrant] AS [m]
+WHERE [m].[Id] > 0
+Executed action method ApiDemoMC.Controllers.MigrantController.Get (ApiDemoMC), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 16.8094ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DataAccessLibrary.Migrant, DataAccessLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action ApiDemoMC.Controllers.MigrantController.Get (ApiDemoMC) in 50.8892ms
+Executed endpoint 'ApiDemoMC.Controllers.MigrantController.Get (ApiDemoMC)'
+Request finished in 123.9673ms 200 application/json; charset=utf-8
+Request starting HTTP/2.0 OPTIONS https://localhost:44363/GetRole  
+CORS policy execution successful.
+Request finished in 18.4271ms 204 
+Request starting HTTP/2.0 GET https://localhost:44363/GetRole  
+Successfully validated the token.
+CORS policy execution successful.
+Executing endpoint 'ApiDemoMC.Controllers.AccountController.GetRole (ApiDemoMC)'
+Route matched with {action = "GetRole", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[ApiDemoMC.DTO.MailRoleDTO] GetRole() on controller ApiDemoMC.Controllers.AccountController (ApiDemoMC).
+Authorization was successful.
+Executing action method ApiDemoMC.Controllers.AccountController.GetRole (ApiDemoMC) - Validation state: Valid
+Entity Framework Core 2.2.6-servicing-10079 initialized 'MC_ContextDb' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (2ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Discriminator], [e].[IsDelete], [e].[Mail], [e].[Name], [e].[Pass], [e].[RoleId], [e].[Phone], [e].[EndDateLicens], [e].[LicensNumber], [e].[Qualification], [e].[StartDateLicens], [e].[Bank_Kor_Sch], [e].[Bank_Rasch_Sch], [e].[Bik_Bank], [e].[FIO], [e].[GradationFIO], [e].[INN], [e].[KPP], [e].[Kor_Sch], [e].[Main_Document], [e].[UrAgent_Phone], [e].[Rasch_Sch], [e].[Ur_Adress]
+FROM [Users] AS [e]
+WHERE [e].[Discriminator] IN (N'UrAgent', N'Buhgalter', N'Agent', N'Admin', N'User') AND ([e].[Id] = @__get_Item_0)
+Executed action method ApiDemoMC.Controllers.AccountController.GetRole (ApiDemoMC), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 20.1529ms.
+Executing ObjectResult, writing value of type 'ApiDemoMC.DTO.MailRoleDTO'.
+Executed action ApiDemoMC.Controllers.AccountController.GetRole (ApiDemoMC) in 54.0581ms
+Executed endpoint 'ApiDemoMC.Controllers.AccountController.GetRole (ApiDemoMC)'
+Request finished in 131.4363ms 200 application/json; charset=utf-8
+Request starting HTTP/2.0 OPTIONS https://localhost:44363/GetRole  
+CORS policy execution successful.
+Request finished in 16.7715ms 204 
+Request starting HTTP/2.0 GET https://localhost:44363/GetRole  
+Successfully validated the token.
+CORS policy execution successful.
+Executing endpoint 'ApiDemoMC.Controllers.AccountController.GetRole (ApiDemoMC)'
+Route matched with {action = "GetRole", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[ApiDemoMC.DTO.MailRoleDTO] GetRole() on controller ApiDemoMC.Controllers.AccountController (ApiDemoMC).
+Authorization was successful.
+Executing action method ApiDemoMC.Controllers.AccountController.GetRole (ApiDemoMC) - Validation state: Valid
+Entity Framework Core 2.2.6-servicing-10079 initialized 'MC_ContextDb' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Discriminator], [e].[IsDelete], [e].[Mail], [e].[Name], [e].[Pass], [e].[RoleId], [e].[Phone], [e].[EndDateLicens], [e].[LicensNumber], [e].[Qualification], [e].[StartDateLicens], [e].[Bank_Kor_Sch], [e].[Bank_Rasch_Sch], [e].[Bik_Bank], [e].[FIO], [e].[GradationFIO], [e].[INN], [e].[KPP], [e].[Kor_Sch], [e].[Main_Document], [e].[UrAgent_Phone], [e].[Rasch_Sch], [e].[Ur_Adress]
+FROM [Users] AS [e]
+WHERE [e].[Discriminator] IN (N'UrAgent', N'Buhgalter', N'Agent', N'Admin', N'User') AND ([e].[Id] = @__get_Item_0)
+Executed action method ApiDemoMC.Controllers.AccountController.GetRole (ApiDemoMC), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 19.4287ms.
+Executing ObjectResult, writing value of type 'ApiDemoMC.DTO.MailRoleDTO'.
+Executed action ApiDemoMC.Controllers.AccountController.GetRole (ApiDemoMC) in 52.1386ms
+Executed endpoint 'ApiDemoMC.Controllers.AccountController.GetRole (ApiDemoMC)'
+Request finished in 116.2405ms 200 application/json; charset=utf-8
